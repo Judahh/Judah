@@ -2,6 +2,19 @@
     width: 100%;
 }
 
+#DivIdCodeBackground{
+    width: 100%;
+    height: 100%;
+    float: left;
+    z-index: -1;
+    opacity: 0.1;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
 #DivIdProjectTitle{
     height: 45px;
     text-align: center;

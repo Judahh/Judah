@@ -1,8 +1,7 @@
 <header>
     <nav>
         <?php
-            include 'Header/MenuSearch.php';
-            include 'Header/MenuOptions.php';
+            include 'Header/Menu.php';
         ?>
     </nav>
 </header>

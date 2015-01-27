@@ -8,6 +8,16 @@
     </div>
 
     <div id="DivIdTableCodeWrap">
+        <div id="DivIdNeon">
+            <div id="DivIdMenuItem">
+                <div id="DivIdIcon">gh</div>
+            </div>
+        </div>
+        <div id="DivIdNeon">
+            <div id="DivIdMenuItem">
+                <div id="DivIdIcon">ijklmno</div>
+            </div>
+        </div>
         <table id="TableIdCode" border="0" cellpadding="0" cellspacing="0" contenteditable="true">
             <tbody>
                 <?php

@@ -3,7 +3,7 @@
         <li>
             <div id="DivIdNeon">
                 <div id="DivIdMenuItem">
-                    <div id="DivIdIcon"><div id="DivIdPulse">?</div></div>
+                    <div id="DivIdIcon"><div id="DivIdPulse">c</div></div>
                 </div>
             </div>
         </li>
@@ -11,7 +11,7 @@
         <li>
             <div id="DivIdNeon">
                 <div id="DivIdMenuItem">
-                    <div id="DivIdIcon"><div id="DivIdPulse">A</div></div>
+                    <div id="DivIdIcon"><div id="DivIdPulse">d</div></div>
                 </div>
             </div>
         </li>

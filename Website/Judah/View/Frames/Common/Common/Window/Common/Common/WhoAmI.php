@@ -43,13 +43,60 @@
                 </div>
             </div>
         </div>
-        <!--
-        <div id="DivIdNeon">
-            <div id="DivIdMenuItem">
-                <div id="DivIdIcon">ijklmno</div>
+
+        <div id="DivIdDivisor">
+            <div id="DivIdDivisorA">
+                <div id="DivIdNeon">
+                    <div id="DivIdMenuItem">
+                        <div id="DivIdIcon">
+                            <div id="DivIdFontBig">
+                                <div id="DivIdHandIcon">
+                                    <div id="DivIdHandIconOff">®</div>
+                                    <div id="DivIdHandIconOn">¯</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="DivIdDivisorB">
+                <div id="DivIdText">
+                    <div id="DivIdProjectTitleText3">
+                        <div id="DivIdTitleTextSize">
+                            Mobile
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        -->
+
+        <div id="DivIdDivisor">
+            <div id="DivIdDivisorA">
+                <div id="DivIdNeon">
+                    <div id="DivIdMenuItem">
+                        <div id="DivIdIcon">
+                            <div id="DivIdFontBig">
+                                <div id="DivIdHandIcon">
+                                    <div id="DivIdHandIconOff">k</div>
+                                    <div id="DivIdHandIconOn">l</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="DivIdDivisorB">
+                <div id="DivIdText">
+                    <div id="DivIdProjectTitleText3">
+                        <div id="DivIdTitleTextSize">
+                            ij(kl)
+                            i(j(mno))
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <table id="TableIdCode" border="0" cellpadding="0" cellspacing="0" contenteditable="true">
             <tbody>
                 <?php

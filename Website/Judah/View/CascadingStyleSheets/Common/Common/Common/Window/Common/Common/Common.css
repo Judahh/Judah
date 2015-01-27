@@ -19,7 +19,6 @@
     height: 0px;
     width: 0px;
     z-index: -1;
-    background-color: green;
 }
 
 #DivIdDivisor{
@@ -33,10 +32,10 @@
 }
 
 #DivIdDivisorB{
+    height: 107px;
     text-align: left;
     float: left;
     vertical-align: text-bottom;
-    background-color: green;
     opacity: 0.5;
 }
 
@@ -69,6 +68,7 @@
 #DivIdProjectTitleText3{
     width: 100%;
     vertical-align: bottom;
+    padding-top: 60px;
 }
 
 #DivIdCodeTitle{

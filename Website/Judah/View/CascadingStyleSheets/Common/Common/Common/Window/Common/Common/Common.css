@@ -15,21 +15,60 @@
     left: 0;
 }
 
+#DivIdTextBackground{
+    height: 0px;
+    width: 0px;
+    z-index: -1;
+    background-color: green;
+}
+
+#DivIdDivisor{
+    width: 100%;
+}
+
+#DivIdDivisorA{
+    width: 107px;
+    text-align: center;
+    float: left;
+}
+
+#DivIdDivisorB{
+    text-align: left;
+    float: left;
+    vertical-align: text-bottom;
+    background-color: green;
+    opacity: 0.5;
+}
+
+#DivIdTextOverText{
+    color: white;
+    height: 103px;
+    text-align: center;
+}
+
 #DivIdProjectTitle{
-    height: 45px;
+    height: 90px;
     text-align: center;
     opacity: 0.5;
 }
 
-#DivIdProjectTitleText{
+#DivIdTitleTextSize{
+    font-size: 40px;
+}
+
+#DivIdProjectTitleText, #DivIdProjectTitleText2{
     height: 45px;
     width: 100%;
-    font-size: 40px;
     vertical-align: bottom;
 }
 
-#DivIdProjectTitleText:active, #DivIdProjectTitleText:focus{
+#DivIdProjectTitleText:active, #DivIdProjectTitleText:focus, #DivIdProjectTitleText2:active, #DivIdProjectTitleText2:focus{
     font-family: FontFuturisticI;
+}
+
+#DivIdProjectTitleText3{
+    width: 100%;
+    vertical-align: bottom;
 }
 
 #DivIdCodeTitle{

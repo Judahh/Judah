@@ -11,8 +11,9 @@
         </div>
     </div>
     <div id="DivIdTable">
+        <div id="DivIdHeaderSpace"></div>
         <?php
-            include 'View/Frames/Common/Common/Window/Common/Code/Common.php';
+            include 'View/Frames/Common/Common/Window/Common/Common/WhoAmI.php';
         ?>
     </div>
 </main>

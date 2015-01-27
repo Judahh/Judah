@@ -257,6 +257,45 @@ button, button:active, button:after, button:before {
     animation: fontFuturisticPulse 1.0s linear;*/
 }
 
+#DivIdFontBig{
+    font-size: 100px;
+}
+
+#DivIdHandIconOff{
+    visibility: visible;
+    height: 100%;
+}
+
+#DivIdHandIconOn{
+    visibility: hidden;
+    height: 0px;
+}
+
+#DivIdHandIcon:hover #DivIdHandIconOff{
+    visibility: hidden;
+    height: 0px;
+}
+
+#DivIdHandIcon:hover #DivIdHandIconOn{
+    visibility: visible;
+    height: 100%;
+}
+
+#DivIdHandIcon #DivIdHandIconOff{
+    visibility: visible;
+    height: 100%;
+}
+
+#DivIdHandIcon #DivIdHandIconOn{
+    visibility: hidden;
+    height: 0px;
+}
+
+#DivIdHeaderSpace{
+    height: 110px;
+    width: 100%;
+}
+
 #DivIdIcon{
     font-smooth:always;
     font-smoothing: antialiased;
@@ -316,6 +355,14 @@ button, button:active, button:after, button:before {
     -ms-animation: spin 2.5s linear infinite;
     -o-animation: spin 2.5s linear infinite;
     animation: spin 2.5s linear infinite;
+}
+
+#DivIdSpin2:hover, ul li:hover #DivIdNeon #DivIdMenuItem #DivIdSpin2{
+    -webkit-animation: spin2 2.5s linear infinite;
+    -moz-animation: spin2 2.5s linear infinite;
+    -ms-animation: spin2 2.5s linear infinite;
+    -o-animation: spin2 2.5s linear infinite;
+    animation: spin2 2.5s linear infinite;
 }
 
 #DivIdNeon{
@@ -455,6 +502,16 @@ ul li ul li {
 
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
+
+@-o-keyframes spin2 { 100% { -o-transform: rotate(-360deg); } }
+
+@-ms-keyframes spin2 { 100% { -ms-transform: rotate(-360deg); } }
+
+@-moz-keyframes spin2 { 100% { -moz-transform: rotate(-360deg); } }
+
+@-webkit-keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); } }
+
+@keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
 
 @-o-keyframes shake {
     0% { -o-transform: rotate(0deg); }

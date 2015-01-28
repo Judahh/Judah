@@ -261,35 +261,188 @@ button, button:active, button:after, button:before {
     font-size: 100px;
 }
 
-#DivIdHandIconOff{
-    visibility: visible;
-    height: 100%;
-}
-
-#DivIdHandIconOn{
+#DivIdHandIconOn, #DivIdHandIcon:hover #DivIdHandIconOff, #DivIdHandIcon #DivIdHandIconOn{
     visibility: hidden;
     height: 0px;
 }
 
-#DivIdHandIcon:hover #DivIdHandIconOff{
-    visibility: hidden;
-    height: 0px;
-}
-
-#DivIdHandIcon:hover #DivIdHandIconOn{
+#DivIdHandIconOff, #DivIdHandIcon:hover #DivIdHandIconOn, #DivIdHandIcon #DivIdHandIconOff{
     visibility: visible;
     height: 100%;
 }
 
-#DivIdHandIcon #DivIdHandIconOff{
+#DivIdConsoleIcon:hover #DivIdConsoleIconOn{
+    visibility: hidden;
+    height: 0px;
+
+    -webkit-animation: consoleOn 1s;
+    -moz-animation: consoleOn 1s;
+    -ms-animation: consoleOn 1s;
+    -o-animation: consoleOn 1s;
+    animation: consoleOn 1s;
+
+    -webkit-animation-timing-function: steps(2, end);
+    -moz-animation-timing-function: steps(2, end);
+    -ms-animation-timing-function: steps(2, end);
+    -o-animation-timing-function: steps(2, end);
+    animation-timing-function: steps(2, end);
+
+    -webkit-animation-delay: -0.5s;
+    -moz-animation-delay: -0.5s;
+    -ms-animation-delay: -0.5s;
+    -o-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+#DivIdConsoleIcon:hover #DivIdConsoleIconOn1{
+    visibility: hidden;
+    height: 0px;
+
+    -webkit-animation: consoleOn 1s infinite;
+    -moz-animation: consoleOn 1s infinite;
+    -ms-animation: consoleOn 1s infinite;
+    -o-animation: consoleOn 1s infinite;
+    animation: consoleOn 1s infinite;
+
+    -webkit-animation-timing-function: steps(2, end);
+    -moz-animation-timing-function: steps(2, end);
+    -ms-animation-timing-function: steps(2, end);
+    -o-animation-timing-function: steps(2, end);
+    animation-timing-function: steps(2, end);
+}
+
+#DivIdConsoleIcon:hover #DivIdConsoleIconOn2{
+    visibility: hidden;
+    height: 0px;
+
+    -webkit-animation: consoleOn 1s infinite;
+    -moz-animation: consoleOn 1s infinite;
+    -ms-animation: consoleOn 1s infinite;
+    -o-animation: consoleOn 1s infinite;
+    animation: consoleOn 1s infinite;
+
+    -webkit-animation-timing-function: steps(2, end);
+    -moz-animation-timing-function: steps(2, end);
+    -ms-animation-timing-function: steps(2, end);
+    -o-animation-timing-function: steps(2, end);
+    animation-timing-function: steps(2, end);
+
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    -ms-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+
+}
+
+#DivIdConsoleIconOff, #DivIdConsoleIcon #DivIdConsoleIconOff{
     visibility: visible;
     height: 100%;
 }
 
-#DivIdHandIcon #DivIdHandIconOn{
+#DivIdConsoleIconOn, #DivIdConsoleIconOn1, #DivIdConsoleIconOn2, #DivIdConsoleIcon:hover #DivIdConsoleIconOff{
     visibility: hidden;
     height: 0px;
 }
+
+#DivIdWebIcon:hover #DivIdWebIconOn1{
+    visibility: hidden;
+    height: 0px;
+
+    -webkit-animation: webOn 2s infinite;
+    -moz-animation: webOn 2s infinite;
+    -ms-animation: webOn 2s infinite;
+    -o-animation: webOn 2s infinite;
+    animation: webOn 2s infinite;
+
+    -webkit-animation-timing-function: steps(4, start);
+    -moz-animation-timing-function: steps(4, start);
+    -ms-animation-timing-function: steps(4, start);
+    -o-animation-timing-function: steps(4, start);
+    animation-timing-function: steps(4, start);
+
+    -webkit-animation-delay: -1.5s;
+    -moz-animation-delay: -1.5s;
+    -ms-animation-delay: -1.5s;
+    -o-animation-delay: -1.5s;
+    animation-delay: -1.5s;
+}
+
+#DivIdWebIcon:hover #DivIdWebIconOn2{
+    visibility: hidden;
+    height: 0px;
+
+    -webkit-animation: webOn 2s infinite;
+    -moz-animation: webOn 2s infinite;
+    -ms-animation: webOn 2s infinite;
+    -o-animation: webOn 2s infinite;
+    animation: webOn 2s infinite;
+
+    -webkit-animation-timing-function: steps(4, start);
+    -moz-animation-timing-function: steps(4, start);
+    -ms-animation-timing-function: steps(4, start);
+    -o-animation-timing-function: steps(4, start);
+    animation-timing-function: steps(4, start);
+
+    -webkit-animation-delay: -1s;
+    -moz-animation-delay: -1s;
+    -ms-animation-delay: -1s;
+    -o-animation-delay: -1s;
+    animation-delay: -1s;
+}
+
+#DivIdWebIcon:hover #DivIdWebIconOn3{
+    visibility: hidden;
+    height: 0px;
+
+    -webkit-animation: webOn 2s infinite;
+    -moz-animation: webOn 2s infinite;
+    -ms-animation: webOn 2s infinite;
+    -o-animation: webOn 2s infinite;
+    animation: webOn 2s infinite;
+
+    -webkit-animation-timing-function: steps(4, start);
+    -moz-animation-timing-function: steps(4, start);
+    -ms-animation-timing-function: steps(4, start);
+    -o-animation-timing-function: steps(4, start);
+    animation-timing-function: steps(4, start);
+
+    -webkit-animation-delay: -0.5s;
+    -moz-animation-delay: -0.5s;
+    -ms-animation-delay: -0.5s;
+    -o-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+
+}
+
+#DivIdWebIcon:hover #DivIdWebIconOn4{
+    visibility: hidden;
+    height: 0px;
+
+    -webkit-animation: webOn 2s infinite;
+    -moz-animation: webOn 2s infinite;
+    -ms-animation: webOn 2s infinite;
+    -o-animation: webOn 2s infinite;
+    animation: webOn 2s infinite;
+
+    -webkit-animation-timing-function: steps(4, start);
+    -moz-animation-timing-function: steps(4, start);
+    -ms-animation-timing-function: steps(4, start);
+    -o-animation-timing-function: steps(4, start);
+    animation-timing-function: steps(4, start);
+
+}
+
+#DivIdWebIconOff, #DivIdWebIcon #DivIdWebIconOff{
+    visibility: visible;
+    height: 100%;
+}
+
+#DivIdWebIconOn1, #DivIdWebIconOn2, #DivIdWebIconOn3, #DivIdWebIconOn4, #DivIdWebIcon:hover #DivIdWebIconOff{
+    visibility: hidden;
+    height: 0px;
+}
+
 
 #DivIdHeaderSpace{
     height: 110px;
@@ -576,6 +729,136 @@ ul li ul li {
     80% { -webkit-transform: rotate(-5deg); transform: rotate(-5deg); }
     90% { -webkit-transform: rotate(10deg); transform: rotate(10deg); }
     100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+@-o-keyframes consoleOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+@-ms-keyframes consoleOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+@-moz-keyframes consoleOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+@-webkit-keyframes consoleOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+@keyframes consoleOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+@-o-keyframes webOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    75% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+@-ms-keyframes webOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    75% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+@-moz-keyframes webOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    75% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+@-webkit-keyframes webOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    75% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+@keyframes webOn {
+    0% {
+        visibility: hidden;
+        height: 0px;
+    }
+    75% {
+        visibility: hidden;
+        height: 0px;
+    }
+    100% {
+        visibility: visible;
+        height: 100%;
+    }
 }
 
 /*

@@ -1,6 +1,4 @@
-typeText="01001010 01110101 01100100 01100001 01101000 00100000 01001000 01101111 01101100 01100001 01101110 01100100 01100001 00100000 01000011 01101111 01110010 01110010 01100101 01101001 01100001 00100000 01001100 01101001 01101101 01100001 ";
-
-divIdCodeBackgroundType = document.getElementById("DivIdCodeBackgroundType");
+var typeWorker;
 
 function toggleDivId(divId) {
     var element = document.getElementById(divId);
@@ -255,7 +253,7 @@ function updateProgress (oEvent) {
     if (oEvent.lengthComputable) {
         var percentComplete = oEvent.loaded / oEvent.total;
         var progressBar = document.getElementById("DivIdProgressBar");
-        progressBarHolder.style.width=percentComplete+"%";
+        progressBar.style.width=percentComplete+"%";
     } else {
         // Unable to compute progress information since the total size is unknown
     }
@@ -293,38 +291,45 @@ function handleCacheError(evt) {
     alert('Error: Cache failed to update!');
 };
 
-function type(delay,currentChar) {
-    var cut=1;
-    var typeTextSubString= typeText.substr(currentChar, 1);
-
-    currentChar++;
-    if(typeTextSubString==" "){
-        currentChar++;
-        cut++;
-        var typeTextSubString= typeText.substr(currentChar-2, 2);
-    }
-    if(isOverflow(divIdCodeBackgroundType)){
-        divIdCodeBackgroundType.innerHTML = divIdCodeBackgroundType.innerHTML.substr(cut, divIdCodeBackgroundType.innerHTML.length + cut -1) + typeTextSubString;
-    }else {
-
-        divIdCodeBackgroundType.innerHTML += typeTextSubString;
-    }
-    if (currentChar>typeText.length){
-        currentChar=1;
-
-        setTimeout(type(delay,currentChar), delay);
-    }else{
-        setTimeout(type(delay,currentChar), delay);
+function startTypeWorker() {
+    if(typeof(Worker) !== "undefined") {
+        if(typeof(typeWorker) == "undefined") {
+            typeWorker = new Worker("View/JavaScript/Common/Common/Common/TypeWorker.js");//View/JavaScript/Common/Common/Common/TypeWorker.js
+        }
+        typeWorker.onmessage = function(event) {
+            var divIdCodeBackgroundType = document.getElementById("DivIdCodeBackgroundType");
+            var typeTextSubString=event.data[0];
+            var cut=event.data[1];
+            if(isOverflow(divIdCodeBackgroundType)){
+                divIdCodeBackgroundType.innerHTML = divIdCodeBackgroundType.innerHTML.substr(cut, divIdCodeBackgroundType.innerHTML.length + cut -1) + typeTextSubString;
+            }else {
+                divIdCodeBackgroundType.innerHTML += typeTextSubString;
+            }
+        };
+    } else {
+        alert("Sorry, your browser does not support Web Workers...");
     }
 }
 
+function stopTypeWorker() {
+    typeWorker.terminate();
+    typeWorker = undefined;
+}
+
 function isOverflow(element){
-    if( element.offsetHeight < element.scrollHeight ||
-        element.offsetWidth < element.scrollWidth){
+    if(element.offsetHeight > getHeight()){
         return true;
     }else{
         return false;
     }
+}
+
+function getHeight() {
+    var body = document.body,
+        html = document.documentElement;
+
+    return  Math.max( body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight );
 }
 
 function sendMailJobOffer(company, name, emails, phones, addresses, jobTitle, jobType, salary, workingHours,description) {

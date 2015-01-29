@@ -1,5 +1,5 @@
 <head>
-    <title>Judah</title>
+    <title>JH</title>
     <meta content="text/html" charset="UTF-8"/>
 
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>

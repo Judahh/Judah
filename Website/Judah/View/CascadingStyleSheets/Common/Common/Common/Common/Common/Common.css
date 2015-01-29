@@ -476,7 +476,7 @@ button, button:active, button:after, button:before {
 }
 
 #DivIdProgressBar{
-    width: 50%;
+    width: 0%;
     height: 100%;
     background-color: #000000;
 }
@@ -1091,4 +1091,129 @@ ul li ul li {
     80% { font-family: "FontFuturisticI"; }
     90% { font-family: "FontFuturisticII"; }
     100% {font-family: "FontFuturisticI"; }
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 25px;
+    height: 25px;
+}
+
+.squaredOne {
+    top: 0;
+    padding: 0;
+    width: 25px;
+    margin: 0;
+    position: relative;
+}
+
+.squaredOne label {
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    -ms-box-sizing: border-box;    /* Firefox, other Gecko */
+    -o-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.squaredOne label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    background: transparent;
+    top: 6px;
+    left: 6px;
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.squaredOne label:hover::after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: 0.5;
+}
+
+.squaredOne input[type=checkbox]:checked + label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    border: 3px solid deepskyblue;
+    border-top: none;
+    border-right: none;
+}
+
+select {
+    padding:5px;
+    margin: 0;
+    color:black;
+    border:black solid 1px;
+    border-radius: 0px;
+    background-color: transparent;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -ms-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    transition: 0.5s linear;
+}
+
+select:hover{
+    background-color: deepskyblue;
+    -webkit-transition: 0.5s linear;
+    -moz-transition: 0.5s linear;
+    -ms-transition: 0.5s linear;
+    -o-transition: 0.5s linear;
+    transition: 0.5s linear;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+label {position:relative}
+label:after {
+    content:'>';
+    font:11px "Consolas", monospace;
+    color:black;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:1px;
+    position:absolute;
+    pointer-events:none;
+}
+label:before {
+    content:'';
+    right:6px; top:0px;
+    width:20px; height:20px;
+    position:absolute;
+    pointer-events:none;
+    display:block;
 }

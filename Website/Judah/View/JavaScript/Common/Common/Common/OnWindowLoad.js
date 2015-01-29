@@ -2,6 +2,7 @@ window.onload = function(){
     //onVideoWindowLoad();
 
     goToPage("WhoAmI");
+    startTypeWorker();
 
     var appCache = window.applicationCache;
     appCache.update();

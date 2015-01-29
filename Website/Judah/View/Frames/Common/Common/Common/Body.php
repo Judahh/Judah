@@ -6,6 +6,13 @@
             </div>
         </div>
     </div>
+    <div id="DivIdCodeBackground">
+        <div id="DivIdText">
+            <div id="DivIdCodeBackgroundType">
+
+            </div>
+        </div>
+    </div>
 </div>
 
 <body>

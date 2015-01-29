@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" manifest="cache.manifest">
     <?php
         include 'View/Frames/Common/Common/Common/Head.php';
         include 'View/Frames/Common/Common/Common/Header.php';

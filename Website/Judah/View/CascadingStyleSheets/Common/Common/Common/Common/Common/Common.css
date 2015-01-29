@@ -235,6 +235,23 @@ button, button:active, button:after, button:before {
     transition: all 0.5s;
 }
 
+#DivIdText2{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    font-family: "FontFuturisticII";
+    padding: 5px;
+    font-size: 20px;
+}
+
+#DivIdHalf{
+    opacity: 0.5;
+}
+
 #DivIdText{
     font-smooth:always;
     font-smoothing: antialiased;
@@ -259,6 +276,10 @@ button, button:active, button:after, button:before {
 
 #DivIdFontBig{
     font-size: 100px;
+}
+
+#DivIdFontBig2{
+    font-size: 500px;
 }
 
 #DivIdHandIconOn, #DivIdHandIcon:hover #DivIdHandIconOff, #DivIdHandIcon #DivIdHandIconOn{
@@ -445,8 +466,19 @@ button, button:active, button:after, button:before {
 
 
 #DivIdHeaderSpace{
-    height: 110px;
+    height: 45px;
     width: 100%;
+}
+
+#DivIdProgressBarHolder{
+    height: 0px;
+    width: 100%;
+}
+
+#DivIdProgressBar{
+    width: 50%;
+    height: 100%;
+    background-color: #000000;
 }
 
 #DivIdIcon{
@@ -520,7 +552,6 @@ button, button:active, button:after, button:before {
 
 #DivIdNeon{
     color: black;
-    opacity: 0.5;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -ms-transition: all 1s;

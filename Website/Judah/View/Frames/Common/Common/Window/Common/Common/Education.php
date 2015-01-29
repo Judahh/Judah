@@ -3,12 +3,7 @@
         <div id="DivIdText">
             <div id="DivIdProjectTitleText">
                 <div id="DivIdTitleTextSize">
-                    Who Am I?
-                </div>
-            </div>
-            <div id="DivIdProjectTitleText2">
-                <div id="DivIdTitleTextSize">
-                    JUDAH HOLANDA CORREIA LIMA
+                    Education
                 </div>
             </div>
         </div>
@@ -44,29 +39,9 @@
             </div>
         </div>
 
-        <div id="DivIdDivisor">
-            <div id="DivIdDivisorA">
-                <div id="DivIdNeon">
-                    <div id="DivIdMenuItem">
-                        <div id="DivIdIcon">
-                            <div id="DivIdFontBig">
-                                <div id="DivIdHandIcon">
-                                    <div id="DivIdHandIconOff">®</div>
-                                    <div id="DivIdHandIconOn">¯</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="DivIdDivisorB">
-                <div id="DivIdText">
-                    <div id="DivIdProjectTitleText3">
-                        <div id="DivIdTitleTextSize">
-                            Mobile
-                        </div>
-                    </div>
-                </div>
+        <div id="DivIdContent">
+            <div id="DivIdText">
+                Talking about Hardware
             </div>
         </div>
 
@@ -95,6 +70,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div id="DivIdContent">
+            <div id="DivIdText">
+                Talking about Software
             </div>
         </div>
 
@@ -127,29 +108,42 @@
             </div>
         </div>
 
-        <table id="TableIdCode" border="0" cellpadding="0" cellspacing="0" contenteditable="true">
-            <tbody>
-                <?php
-                    for($index=1;$index<1;$index++) {
-                ?>
-                        <tr id="TrIdCode">
-                            <td id="TdIdColumnLine" contenteditable="false">
-                                <div id="DivIdText" contenteditable="false">
-                                    <div id="DivIdColumnLineText" contenteditable="false"></div>
+        <div id="DivIdContent">
+            <div id="DivIdText">
+                Talking about Web
+            </div>
+        </div>
+
+        <div id="DivIdDivisor">
+            <div id="DivIdDivisorA2">
+                <div id="DivIdNeon">
+                    <div id="DivIdMenuItem">
+                        <div id="DivIdIcon">
+                            <div id="DivIdFontBig">
+                                <div id="DivIdHandIcon">
+                                    <div id="DivIdHandIconOff">®</div>
+                                    <div id="DivIdHandIconOn">¯</div>
                                 </div>
-                            </td>
-                            <td id="TdIdColumnCode">
-                                <div id="DivIdColumnCodeText">
-                                    <?php
-                                        echo "Common Example " . $index;
-                                    ?>
-                                </div>
-                            </td>
-                        </tr>
-                <?php
-                    }
-                ?>
-            </tbody>
-        </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="DivIdDivisorB">
+                <div id="DivIdText">
+                    <div id="DivIdProjectTitleText3">
+                        <div id="DivIdTitleTextSize">
+                            Mobile
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="DivIdContent">
+            <div id="DivIdText">
+                Talking about Mobile
+            </div>
+        </div>
     </div>
 </div>

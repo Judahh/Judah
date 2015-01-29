@@ -23,32 +23,39 @@
 
 #DivIdDivisor{
     width: 100%;
+    height: 89px;
+    display: block;
+    border-bottom: solid black;
+}
+
+#DivIdContent{
+    width: 100%;
+    display: block;
 }
 
 #DivIdDivisorA{
-    width: 107px;
-    text-align: center;
+    width: 89px;
+    float: left;
+}
+
+#DivIdDivisorA2{
+    width: 102px;
     float: left;
 }
 
 #DivIdDivisorB{
-    height: 107px;
+    height: 89px;
     text-align: left;
     float: left;
     vertical-align: text-bottom;
-    opacity: 0.5;
 }
 
 #DivIdTextOverText{
     color: white;
-    height: 103px;
-    text-align: center;
 }
 
 #DivIdProjectTitle{
-    height: 90px;
     text-align: center;
-    opacity: 0.5;
 }
 
 #DivIdTitleTextSize{
@@ -56,7 +63,6 @@
 }
 
 #DivIdProjectTitleText, #DivIdProjectTitleText2{
-    height: 45px;
     width: 100%;
     vertical-align: bottom;
 }
@@ -68,17 +74,14 @@
 #DivIdProjectTitleText3{
     width: 100%;
     vertical-align: bottom;
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
 #DivIdCodeTitle{
-    height: 45px;
     text-align: center;
-    opacity: 0.5;
 }
 
 #DivIdCodeTitleText{
-     height: 45px;
      width: 100%;
      font-size: 40px;
 }
@@ -91,110 +94,73 @@
     width: 100%;
 }
 
-#TableIdCode{
-    counter-reset: lines;
-
-    height: 100%;
-    width: 100%;
-
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: none;
-    padding: 0;
-    margin: 0;
-}
-
-#TrIdCode{
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: none;
-    padding: 0;
-    margin: 0;
-
+#DivFullBlock{
     width: 100%;
 }
 
-#TrIdCode:hover, #TrIdCode:active, #TrIdCode:focus{
-    background-color: dodgerblue;
+#DivHalfBlock{
+    width: 50%;
+    float: left;
 }
 
-#TrIdCode::-moz-selection, #TrIdCode::selection {
-    color: white;
-    background: deepskyblue;
+#DivThirdBlock{
+    width: 33%;
+    float: left;
 }
 
-#TdIdColumnLine{
-    border-collapse: collapse;
-    border-spacing: 0;
-    border: none;
-    padding: 0;
-    margin: 0;
-
-    vertical-align: bottom;
-    text-align: right;
-
-    opacity: 0.5;
-
-    height: 100%;
-    min-width: 45px;
-    width: 45px;
-    max-width: 90px;
-
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+#DivFloatLeft{
+    float: left;
 }
 
-#DivIdColumnLineText:before {
-    content: counter(lines);
-    counter-increment: lines;
-}
-
-#DivIdColumnLineText {
-    width: 100%;
-    height: 100%;
-    font-size: 15px;
-    padding: 0px;
-    margin-bottom: -3px;
-
-    vertical-align: middle;
-
-    top:0;
-    border: none;
-    overflow: auto;
-    outline: none;
-}
-
-#TdIdColumnCode{
-    height: 100%;
-    width: auto;
-}
-
-#DivIdColumnCodeText, #DivIdColumnCodeText:hover, #DivIdColumnCodeText:active, #DivTextAreaIdColumnCode:focus{
-    vertical-align: bottom;
-
-    width: 100%;
-    height: 100%;
-    font-family: "Arial", Arial, Sans-serif;
+#InputIdCompany, #InputIdName{
+    float: left;
     font-size: 20px;
-    padding: 0px;
-    vertical-align: middle;
-
-    border: none;
-    overflow: hidden;
-    outline: none;
-
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    color: black;
-    opacity: 0.7;
+    width: 100%;
+    border-bottom: 2px solid black;
+    background-color: white;
 }
 
-#TdIdColumnCode::-moz-selection, #TdIdColumnCode::selection, #DivIdColumnCodeText::-moz-selection, #DivIdColumnCodeText::selection {
-    color: white;
-    background: deepskyblue;
+
+#TableIdAddress{
+    width: 100%;
+}
+
+#TrIdTableAddress{
+
+}
+
+#TdIdTableAddress{
+
+}
+
+#TableIdPhone{
+    width: 100%;
+}
+
+#TrIdTablePhone{
+
+}
+
+#TdIdTablePhone{
+
+}
+
+#SelectIdPhone{
+
+}
+
+#OptionIdPhone{
+
+}
+
+#TableIdEmail{
+    width: 100%;
+}
+
+#TrIdTableEmail{
+
+}
+
+#TdIdTableEmail{
+
 }

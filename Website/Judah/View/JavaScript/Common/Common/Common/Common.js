@@ -1,3 +1,7 @@
+typeText="01001010 01110101 01100100 01100001 01101000 00100000 01001000 01101111 01101100 01100001 01101110 01100100 01100001 00100000 01000011 01101111 01110010 01110010 01100101 01101001 01100001 00100000 01001100 01101001 01101101 01100001 ";
+
+divIdCodeBackgroundType = document.getElementById("DivIdCodeBackgroundType");
+
 function toggleDivId(divId) {
     var element = document.getElementById(divId);
     if (element.style.display == 'none') {
@@ -185,4 +189,152 @@ function goHorizontal(element,time,initial,end,right){
             }
         },time * 10
     );
+}
+
+function request(element,file,format) {
+    var domStorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
+    var cached=domStorage[file];
+    var cached2=sessionStorage.getItem(file);
+
+    if (cached==null||cached==''||cached==undefined) {
+        cached=cached2;
+    }
+
+    //alert("Cached of "+file+"=("+cached+")");
+
+    if (cached==null||cached==''||cached==undefined) {
+        var ajaxRequest;
+
+        try {
+            // Opera 8.0+, Firefox, Safari
+            ajaxRequest = new XMLHttpRequest();
+        } catch (e) {
+            // Internet Explorer Browsers
+            try {
+                ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (e) {
+                try {
+                    ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (e) {
+                    // Something went wrong
+                    transferFailed(null);
+                    return false;
+                }
+            }
+        }
+
+        ajaxRequest.addEventListener("progress", updateProgress, false);
+        ajaxRequest.addEventListener("load", transferComplete, false);
+        ajaxRequest.addEventListener("error", transferFailed, false);
+        ajaxRequest.addEventListener("abort", transferCanceled, false);
+        var progressBarHolder = document.getElementById("DivIdProgressBarHolder");
+        progressBarHolder.style.height = "10px";
+
+        ajaxRequest.onreadystatechange = function () {
+            if (ajaxRequest.readyState == 4) {
+                var ajaxDisplay = document.getElementById(element);
+                ajaxDisplay.innerHTML = ajaxRequest.responseText;
+            }
+        }
+
+        ajaxRequest.open(format, file, true);
+        ajaxRequest.send();
+
+        sessionStorage.setItem(file, ajaxRequest.responseText);
+        domStorage[file]=ajaxRequest.responseText;
+    }else{
+        document.getElementById(element).innerHTML=cached;
+    }
+}
+
+function goToPage(window) {
+    request("DivIdPage","View/Frames/Common/Common/Window/Common/Common/"+window+".php","GET");
+}
+
+function updateProgress (oEvent) {
+    if (oEvent.lengthComputable) {
+        var percentComplete = oEvent.loaded / oEvent.total;
+        var progressBar = document.getElementById("DivIdProgressBar");
+        progressBarHolder.style.width=percentComplete+"%";
+    } else {
+        // Unable to compute progress information since the total size is unknown
+    }
+}
+
+function transferComplete(evt) {
+    var progressBarHolder = document.getElementById("DivIdProgressBarHolder");
+    progressBarHolder.style.height="0px";
+}
+
+function transferFailed(evt) {
+    alert("An error occurred while transferring the file.");
+}
+
+function transferCanceled(evt) {
+    alert("The transfer has been canceled by the user.");
+}
+
+function handleCacheEvent(evt) {
+
+    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+        // Browser downloaded a new app cache.
+        // Swap it in and reload the page to get the new hotness.
+        window.applicationCache.swapCache();
+        if (confirm('A new version of this site is available. Load it?')) {
+            window.location.reload();
+        }
+    } else {
+        // Manifest didn't changed. Nothing new to server.
+    }
+
+}
+
+function handleCacheError(evt) {
+    alert('Error: Cache failed to update!');
+};
+
+function type(delay,currentChar) {
+    var cut=1;
+    var typeTextSubString= typeText.substr(currentChar, 1);
+
+    currentChar++;
+    if(typeTextSubString==" "){
+        currentChar++;
+        cut++;
+        var typeTextSubString= typeText.substr(currentChar-2, 2);
+    }
+    if(isOverflow(divIdCodeBackgroundType)){
+        divIdCodeBackgroundType.innerHTML = divIdCodeBackgroundType.innerHTML.substr(cut, divIdCodeBackgroundType.innerHTML.length + cut -1) + typeTextSubString;
+    }else {
+
+        divIdCodeBackgroundType.innerHTML += typeTextSubString;
+    }
+    if (currentChar>typeText.length){
+        currentChar=1;
+
+        setTimeout(type(delay,currentChar), delay);
+    }else{
+        setTimeout(type(delay,currentChar), delay);
+    }
+}
+
+function isOverflow(element){
+    if( element.offsetHeight < element.scrollHeight ||
+        element.offsetWidth < element.scrollWidth){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+function sendMailJobOffer(company, name, emails, phones, addresses, jobTitle, jobType, salary, workingHours,description) {
+    var link = "mailto:judahholanda7@gmail.com"
+    + "&subject=" + escape("Job Offer from "+name+" of "+company)
+    + "&body=" + escape(description);
+
+    window.location.href = link;
+}
+
+function sendMail() {
+
 }

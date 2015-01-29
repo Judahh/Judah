@@ -247,7 +247,7 @@
             </div>
         </div>
         <div id="DivFullBlock">
-            <button id="ButtonIdSend">
+            <button id="ButtonIdSend" onclick="sendMail()">
                 <div id="DivIdText">
                     SEND
                 </div>

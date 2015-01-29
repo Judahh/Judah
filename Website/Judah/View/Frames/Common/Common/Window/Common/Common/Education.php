@@ -10,6 +10,34 @@
     </div>
 
     <div id="DivIdTableCodeWrap">
+
+        <div id="DivIdDivisor">
+            <div id="DivIdDivisorA">
+                <div id="DivIdNeon">
+                    <div id="DivIdMenuItem">
+                        <div id="DivIdIcon">
+                            <div id="DivIdFontBig">±</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="DivIdDivisorB">
+                <div id="DivIdText">
+                    <div id="DivIdProjectTitleText3">
+                        <div id="DivIdTitleTextSize">
+                            Diplomas/Certificates
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="DivIdContent">
+            <div id="DivIdText">
+                Talking about Diplomas/Certificates
+            </div>
+        </div>
+
         <div id="DivIdDivisor">
             <div id="DivIdDivisorA">
                 <div id="DivIdNeon">

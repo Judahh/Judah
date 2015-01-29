@@ -213,10 +213,10 @@ button, button:active, button:after, button:before {
     text-decoration: none;
 }
 
-#DivIdRedCircle{
-    background: red;
-    height: 15px;
-    width: 15px;
+#DivIdBlueCircle, #DivIdBlackCircle, #DivIdRedCircle{
+    cursor: hand;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     opacity: 0.7;
     -webkit-transition: all 0.5s;
@@ -224,15 +224,34 @@ button, button:active, button:after, button:before {
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+    color: white;
 }
 
-#DivIdRedCircle:hover{
+#DivIdBlackCircle{
+    background: black;
+}
+
+#DivIdBlueCircle{
+    background: dodgerblue;
+}
+
+#DivIdRedCircle{
+    background: red;
+}
+
+#DivIdRedCircle:hover, #DivIdBlueCircle:hover{
     opacity: 1;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
+}
+
+#DivIdCircleText{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #DivIdText2{

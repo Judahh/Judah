@@ -43,6 +43,11 @@
     float: left;
 }
 
+#DivIdDivisorA3{
+    width: 115px;
+    float: left;
+}
+
 #DivIdDivisorB{
     height: 89px;
     text-align: left;
@@ -94,6 +99,16 @@
     width: 100%;
 }
 
+#ImgIdPicture{
+    border-radius: 1000px;
+}
+
+#DivIdSquare{
+    float: left;
+    width: 25px;
+    height: 25px;
+}
+
 #DivFullBlock{
     width: 100%;
     display: block;
@@ -110,11 +125,16 @@
     float: left;
 }
 
+#DivQuarterBlock{
+    width: 25%;
+    float: left;
+}
+
 #DivFloatLeft{
     float: left;
 }
 
-#InputIdCompany, #InputIdName, #InputIdEmail, #InputIdPhone, #InputIdAddress, #InputIdSalary, #InputIdJobTitle{
+#InputIdCompany, #InputIdName, #InputIdEmail, #InputIdPhone, #InputIdAddress, #InputIdSalary, #InputIdJobTitle, #InputIdHourIn, #InputIdHourOut{
     float: left;
     font-size: 20px;
     width: 100%;
@@ -157,6 +177,24 @@
 
 #TdIdTableEmail{
 
+}
+
+#TdIdTableCircle{
+    max-width: 25px;
+    min-width: 25px;
+    width: 25px;
+}
+
+#TdIdTableWeek{
+    max-width: 175px;
+    min-width: 175px;
+    width: 175px;
+}
+
+#TdIdTableFlexible{
+    max-width: 95px;
+    min-width: 95px;
+    width: 95px;
 }
 
 #TextAreaIdDescription{

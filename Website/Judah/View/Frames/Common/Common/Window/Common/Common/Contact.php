@@ -1,4 +1,4 @@
-<div id="DivIdCode" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<div id="DivIdCode">
     <div id="DivIdProjectTitle">
         <div id="DivIdText">
             <div id="DivIdProjectTitleText">
@@ -46,15 +46,15 @@
                 </div>
                 <table id="TableIdEmail">
                     <tr id="TrIdTableEmail">
-                        <td id="TdIdTableEmail">
-                            Remove
+                        <td id="TdIdTableCircle">
+                            <div id="DivIdRedCircle"><div id="DivIdCircleText">-</div></div>
                         </td>
                         <td id="TdIdTableEmail">
                             <input id="InputIdEmail">
                             </input>
                         </td>
-                        <td id="TdIdTableEmail">
-                            Add
+                        <td id="TdIdTableCircle">
+                            <div id="DivIdBlueCircle"><div id="DivIdCircleText">+</div></div>
                         </td>
                     </tr>
                 </table>
@@ -65,14 +65,14 @@
                 </div>
                 <table id="TableIdPhone">
                     <tr id="TrIdTablePhone">
-                        <td id="TdIdTablePhone">
-                            Remove
+                        <td id="TdIdTableCircle">
+                            <div id="DivIdRedCircle"><div id="DivIdCircleText">-</div></div>
                         </td>
                         <td id="TdIdTablePhone">
                             <label>
                                 <select id="SelectIdPhone">
                                     <option id="OptionIdPhone">
-                                        F
+                                        <div id="DivIdIcon">6</div>
                                     </option>
                                     <option id="OptionIdPhone">
                                         C
@@ -84,8 +84,8 @@
                             <input id="InputIdPhone">
                             </input>
                         </td>
-                        <td id="TdIdTablePhone">
-                            Add
+                        <td id="TdIdTableCircle">
+                            <div id="DivIdBlueCircle"><div id="DivIdCircleText">+</div></div>
                         </td>
                     </tr>
                 </table>
@@ -97,15 +97,15 @@
             </div>
             <table id="TableIdAddress">
                 <tr id="TrIdTableAddress">
-                    <td id="TdIdTableAddress">
-                        Remove
+                    <td id="TdIdTableCircle">
+                        <div id="DivIdRedCircle"><div id="DivIdCircleText">-</div></div>
                     </td>
                     <td id="TdIdTableAddress">
                         <input id="InputIdAddress">
                         </input>
                     </td>
-                    <td id="TdIdTableAddress">
-                        Add
+                    <td id="TdIdTableCircle">
+                        <div id="DivIdBlueCircle"><div id="DivIdCircleText">+</div></div>
                     </td>
                 </tr>
             </table>
@@ -118,20 +118,26 @@
                     </div>
                 </div>
                 <div id="DivFloatLeft">
-                    <label>
-                        <select id="SelectIdJobTitleType">
-                            <option id="OptionIdJobTitleType">
-                                Consultant
-                            </option>
-                            <option id="OptionIdJobTitleType">
-                                Temporary
-                            </option>
-                        </select>
-                    </label>
-                </div>
-                <div id="DivFloatLeft">
-                    <input id="InputIdJobTitle">
-                    </input>
+                    <table id="TableIdJobTitle">
+                        <tr id="TrIdTableJobTitle">
+                            <td id="TdIdTableJobTitle">
+                                <label>
+                                    <select id="SelectIdJobTitleType">
+                                        <option id="OptionIdJobTitleType">
+                                            Consultant
+                                        </option>
+                                        <option id="OptionIdJobTitleType">
+                                            Temporary
+                                        </option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td id="TdIdTableJobTitle">
+                                <input id="InputIdJobTitle">
+                                </input>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div id="DivThirdBlock">
@@ -141,38 +147,53 @@
                     </div>
                 </div>
                 <div id="DivFloatLeft">
-                    <label>
-                        <select id="SelectIdSalaryCoin">
-                            <option id="OptionIdSalaryCoin">
-                                US$
-                            </option>
-                            <option id="OptionIdSalaryCoin">
-                                R$
-                            </option>
-                        </select>
-                    </label>
-                </div>
-                <div id="DivFloatLeft">
-                    <input id="InputIdSalary">
-                    </input>
-                </div>
-                <div id="DivFloatLeft">
-                    <label>
-                        <select id="SelectIdSalaryType">
-                            <option id="OptionIdSalaryType">
-                                /h
-                            </option>
-                            <option id="OptionIdSalaryType">
-                                /m
-                            </option>
-                        </select>
-                    </label>
-                </div>
-                <div id="DivFloatLeft">
-                    <div class="squaredOne">
-                        <input type="checkbox" id="squaredOne1" value="none" name="flexible"/>
-                        <label for="squaredOne1"></label>
-                    </div>
+                    <table id="TableIdSalary">
+                        <tr id="TrIdTableSalary">
+                            <td id="TdIdTableSalary">
+                                <label>
+                                    <select id="SelectIdSalaryCoin">
+                                        <option id="OptionIdSalaryCoin">
+                                            US$
+                                        </option>
+                                        <option id="OptionIdSalaryCoin">
+                                            R$
+                                        </option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td id="TdIdTableSalary">
+                                <div id="DivFloatLeft">
+                                    <input id="InputIdSalary">
+                                    </input>
+                                </div>
+                            </td>
+                            <td id="TdIdTableSalary">
+                                <label>
+                                    <select id="SelectIdSalaryType">
+                                        <option id="OptionIdSalaryType">
+                                            /h
+                                        </option>
+                                        <option id="OptionIdSalaryType">
+                                            /m
+                                        </option>
+                                    </select>
+                                </label>
+                            </td>
+                            <td id="TdIdTableFlexible">
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne1" value="none" name="flexible"/>
+                                        <label for="squaredOne1"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div id="DivIdText">
+                                        flexible
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div id="DivThirdBlock">
@@ -182,57 +203,150 @@
                     </div>
                 </div>
                 <div id="DivFloatLeft">
-                    <div class="squaredOne">
-                        <input type="checkbox" id="squaredOne2" value="none" name="weekDay"/>
-                        <label for="squaredOne2"></label>
-                    </div>
-                </div>
-                <div id="DivFloatLeft">
-                    <div class="squaredOne">
-                        <input type="checkbox" id="squaredOne3" value="none" name="weekDay"/>
-                        <label for="squaredOne3"></label>
-                    </div>
-                </div>
-                <div id="DivFloatLeft">
-                    <div class="squaredOne">
-                        <input type="checkbox" id="squaredOne4" value="none" name="weekDay"/>
-                        <label for="squaredOne4"></label>
-                    </div>
-                </div>
-                <div id="DivFloatLeft">
-                    <div class="squaredOne">
-                        <input type="checkbox" id="squaredOne5" value="none" name="weekDay"/>
-                        <label for="squaredOne5"></label>
-                    </div>
-                </div>
-                <div id="DivFloatLeft">
-                    <div class="squaredOne">
-                        <input type="checkbox" id="squaredOne6" value="none" name="weekDay"/>
-                        <label for="squaredOne6"></label>
-                    </div>
-                </div>
-                <div id="DivFloatLeft">
-                    <div class="squaredOne">
-                        <input type="checkbox" id="squaredOne7" value="none" name="weekDay"/>
-                        <label for="squaredOne7"></label>
-                    </div>
-                </div>
-                <div id="DivFloatLeft">
-                    <div class="squaredOne">
-                        <input type="checkbox" id="squaredOne8" value="none" name="weekDay"/>
-                        <label for="squaredOne8"></label>
-                    </div>
+                    <table id="TableIdWorkingHours">
+                        <tr id="TrIdTableWorkingHours">
+                            <td id="TdIdTableWeek">
+                                <div id="DivIdSquare"><div id="DivIdText">S</div></div>
+                                <div id="DivIdSquare"><div id="DivIdText">M</div></div>
+                                <div id="DivIdSquare"><div id="DivIdText">T</div></div>
+                                <div id="DivIdSquare"><div id="DivIdText">W</div></div>
+                                <div id="DivIdSquare"><div id="DivIdText">T</div></div>
+                                <div id="DivIdSquare"><div id="DivIdText">F</div></div>
+                                <div id="DivIdSquare"><div id="DivIdText">S</div></div>
+                            </td>
+                        </tr>
+                        <tr id="TrIdTableWorkingHours">
+                            <td id="TdIdTableWeek">
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne2" value="none" name="weekDay"/>
+                                        <label for="squaredOne2"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne3" value="none" name="weekDay"/>
+                                        <label for="squaredOne3"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne4" value="none" name="weekDay"/>
+                                        <label for="squaredOne4"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne5" value="none" name="weekDay"/>
+                                        <label for="squaredOne5"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne6" value="none" name="weekDay"/>
+                                        <label for="squaredOne6"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne7" value="none" name="weekDay"/>
+                                        <label for="squaredOne7"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne8" value="none" name="weekDay"/>
+                                        <label for="squaredOne8"></label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td id="TdIdTableFlexible">
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne9" value="none" name="flexible"/>
+                                        <label for="squaredOne9"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div id="DivIdText">
+                                        flexible
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="TrIdTableWorkingHours">
+                            <td id="TdIdTableWorkingHours">
+                                <table id="TableIdIn">
+                                    <tr id="TrIdTableIn">
+                                        <td id="TdIdTableIn">
+                                            <div id="DivIdText">
+                                                In
+                                            </div>
+                                        </td>
+                                        <td id="TdIdTableIn">
+                                            <input id="InputIdHourIn">
+                                            </input>
+                                        </td>
+                                        <td id="TdIdTableIn">
+                                            <div id="DivIdText">
+                                                h
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td id="TdIdTableFlexible">
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne10" value="none" name="flexible"/>
+                                        <label for="squaredOne10"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div id="DivIdText">
+                                        flexible
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="TrIdTableWorkingHours">
+                            <td id="TdIdTableWorkingHours">
+                                <table id="TableIdOut">
+                                    <tr id="TrIdTableOut">
+                                        <td id="TdIdTableOut">
+                                            <div id="DivIdText">
+                                                Out
+                                            </div>
+                                        </td>
+                                        <td id="TdIdTableOut">
+                                            <input id="InputIdHourOut">
+                                            </input>
+                                        </td>
+                                        <td id="TdIdTableOut">
+                                            <div id="DivIdText">
+                                                h
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td id="TdIdTableFlexible">
+                                <div id="DivFloatLeft">
+                                    <div class="squaredOne">
+                                        <input type="checkbox" id="squaredOne11" value="none" name="flexible"/>
+                                        <label for="squaredOne11"></label>
+                                    </div>
+                                </div>
+                                <div id="DivFloatLeft">
+                                    <div id="DivIdText">
+                                        flexible
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
 
-                <div id="DivIdWorkingHoursSlider">
-                </div>
-
-                <div id="DivFloatLeft">
-                    <div class="squaredOne">
-                        <input type="checkbox" id="squaredOne9" value="none" name="flexible"/>
-                        <label for="squaredOne9"></label>
-                    </div>
-                </div>
             </div>
         </div>
         <div id="DivFullBlock">
@@ -252,6 +366,26 @@
                     SEND
                 </div>
             </button>
+        </div>
+        <div id="DivIdDivisor">
+            <div id="DivIdDivisorA">
+                <div id="DivIdNeon">
+                    <div id="DivIdMenuItem">
+                        <div id="DivIdIcon">
+                            <div id="DivIdFontBig">±</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="DivIdDivisorB">
+                <div id="DivIdText">
+                    <div id="DivIdProjectTitleText3">
+                        <div id="DivIdTitleTextSize">
+                            Social Networks
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

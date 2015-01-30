@@ -20,6 +20,24 @@
 }
 
 @font-face {
+    font-family: "FontIconSocialMedia";
+    src: url("../../../../../../Fonts/Socialico.otf");
+    /*src: url("../../../../../../Fonts/Socialico.woff") format('woff');
+    src: url("../../../../../../Fonts/Socialico.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontIconSocialMedia2";
+    src: url("../../../../../../Fonts/SocialicoPlus.otf");
+    /*src: url("../../../../../../Fonts/SocialicoPlus.woff") format('woff');
+    src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "FontFuturisticI";
     src: url("../../../../../../Fonts/FuturisticFontI.otf");
     src: url("../../../../../../Fonts/FuturisticFontI.woff") format('woff');
@@ -500,6 +518,32 @@ button, button:active, button:after, button:before {
     background-color: #000000;
 }
 
+#DivIdIconSocialMedia{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    font-family: "FontIconSocialMedia";
+    padding: 5px;
+    font-size: 40px;
+}
+
+#DivIdIconSocialMedia2{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    font-family: "FontIconSocialMedia2";
+    padding: 5px;
+    font-size: 40px;
+}
+
 #DivIdIcon{
     font-smooth:always;
     font-smoothing: antialiased;
@@ -569,7 +613,11 @@ button, button:active, button:after, button:before {
     animation: spin2 2.5s linear infinite;
 }
 
-#DivIdNeon{
+a{
+    text-decoration: none;
+}
+
+a, #DivIdNeon{
     color: black;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;
@@ -578,7 +626,7 @@ button, button:active, button:after, button:before {
     transition: all 1s;
 }
 
-#DivIdNeon:hover, ul li:hover #DivIdNeon #DivIdMenuItem{
+a:hover, #DivIdNeon:hover, ul li:hover #DivIdNeon #DivIdMenuItem{
     color: deepskyblue;
     -webkit-transition: all 1s;
     -moz-transition: all 1s;

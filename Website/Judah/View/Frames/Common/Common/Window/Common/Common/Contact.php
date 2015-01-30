@@ -372,7 +372,7 @@
                 <div id="DivIdNeon">
                     <div id="DivIdMenuItem">
                         <div id="DivIdIcon">
-                            <div id="DivIdFontBig">±</div>
+                            <div id="DivIdFontBig">¶</div>
                         </div>
                     </div>
                 </div>
@@ -384,6 +384,59 @@
                             Social Networks
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="DivIdContent">
+            <br>
+            <div id="DivFloatLeft">
+                <div id="DivIdNeon">
+                    <a id="DivIdIconSocialMedia" href="http://linkedin.com/pub/judah-holanda" target="_blank">
+                        i
+                    </a>
+                </div>
+            </div>
+            <div id="DivFloatLeft">
+                <div id="DivIdNeon">
+                    <a id="DivIdIconSocialMedia2" href="http://github.com/Judahh/" target="_blank">
+                        z
+                    </a>
+                </div>
+            </div>
+            <div id="DivFloatLeft">
+                <div id="DivIdNeon">
+                    <a id="DivIdIconSocialMedia" href="http://facebook.com/JHCL007" target="_blank">
+                        f
+                    </a>
+                </div>
+            </div>
+            <div id="DivFloatLeft">
+                <div id="DivIdNeon">
+                    <a id="DivIdIconSocialMedia2" href="http://google.com/+JudahHolanda" target="_blank">
+                        h
+                    </a>
+                </div>
+            </div>
+            <div id="DivFloatLeft">
+                <div id="DivIdNeon">
+                    <a id="DivIdIconSocialMedia" href="http://twitter.com/JH_esse" target="_blank">
+                        l
+                    </a>
+                </div>
+            </div>
+            <div id="DivFloatLeft">
+                <div id="DivIdNeon">
+                    <a id="DivIdIconSocialMedia" href="http://youtube.com/c/JudahHolanda" target="_blank">
+                        x
+                    </a>
+                </div>
+            </div>
+            <div id="DivFloatLeft">
+                <div id="DivIdNeon">
+                    <a id="DivIdIconSocialMedia2" href="http://instagram.com/judahholanda/" target="_blank">
+                        i
+                    </a>
                 </div>
             </div>
         </div>

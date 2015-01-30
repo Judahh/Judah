@@ -1,9 +1,16 @@
+<?php
+    include ('../../../../../../Languages/MultilingualText.php');
+?>
+
 <div id="DivIdCode">
     <div id="DivIdProjectTitle">
         <div id="DivIdText">
             <div id="DivIdProjectTitleText">
                 <div id="DivIdTitleTextSize">
-                    Skills
+                    <?php
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "skills");
+                    ?>
                 </div>
             </div>
         </div>
@@ -29,7 +36,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Inteligence
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "intelligence");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -38,7 +48,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Inteligence
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "talkingAboutIntelligence");
+                ?>
             </div>
         </div>
 
@@ -58,7 +71,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Teamwork
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "teamwork");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -67,7 +83,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Teamwork
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "talkingAboutTeamwork");
+                ?>
             </div>
         </div>
 
@@ -87,7 +106,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Leadership
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "leadership");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -96,7 +118,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Leadership
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "talkingAboutLeadership");
+                ?>
             </div>
         </div>
 
@@ -116,7 +141,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Languages/Communication
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "languages/Communication");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -125,7 +153,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Languages/Communication
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "talkingAboutLanguages/Communication");
+                ?>
             </div>
         </div>
 
@@ -148,7 +179,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Flexibility
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "flexibility");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -157,7 +191,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Flexibility
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Skills", "talkingAboutFlexibility");
+                ?>
             </div>
         </div>
     </div>

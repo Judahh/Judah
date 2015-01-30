@@ -245,10 +245,6 @@ function request(element,file,format) {
     }
 }
 
-function goToPage(window) {
-    request("DivIdPage","View/Frames/Common/Common/Window/Common/Common/"+window+".php","GET");
-}
-
 function updateProgress (oEvent) {
     if (oEvent.lengthComputable) {
         var percentComplete = oEvent.loaded / oEvent.total;
@@ -522,4 +518,8 @@ function addAddress() {
     cell1.innerHTML = '<div id="DivIdRedCircle"><div id="DivIdCircleText" onclick="removeAddress('+(element.rows.length-1)+')">-</div></div>';
     cell2.innerHTML = '<input id="InputIdAddress"></input>';
     cell3.innerHTML = '<div id="DivIdBlueCircle"><div id="DivIdCircleText" onclick="addAddress()">+</div></div>';
+}
+
+function goToPage(window) {
+    request("DivIdPage","View/Frames/Common/Common/Window/Common/Common/"+window+".php","GET");
 }

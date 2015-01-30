@@ -3,7 +3,10 @@
         <div id="DivIdText">
             <div id="DivIdProjectTitleText">
                 <div id="DivIdTitleTextSize">
-                    Education
+                    <?php
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "education");
+                    ?>
                 </div>
             </div>
         </div>
@@ -25,7 +28,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Diplomas/Certificates
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "diplomas/Certificates");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -34,7 +40,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Diplomas/Certificates
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "talkingAboutDiplomas/Certificates");
+                ?>
             </div>
         </div>
 

@@ -1,14 +1,23 @@
+<?php
+    include ('../../../../../../Languages/MultilingualText.php');
+?>
+
 <div id="DivIdCode">
     <div id="DivIdProjectTitle">
         <div id="DivIdText">
             <div id="DivIdProjectTitleText">
                 <div id="DivIdTitleTextSize">
-                    Who Am I?
+                    <?php
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "WhoAmI", "whoAmI");
+                    ?>
                 </div>
             </div>
             <div id="DivIdProjectTitleText2">
                 <div id="DivIdTitleTextSize">
-                    JUDAH HOLANDA CORREIA LIMA
+                    <?php
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "WhoAmI", "name");
+                    ?>
                 </div>
             </div>
         </div>
@@ -20,7 +29,9 @@
             </img>
         </div>
         <div id="DivIdText">
-            Talking about Me
+            <?php
+                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "WhoAmI", "talkingAboutMe");
+            ?>
         </div>
     </div>
 </div>

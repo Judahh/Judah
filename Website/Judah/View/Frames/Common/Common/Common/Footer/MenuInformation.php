@@ -3,7 +3,7 @@
         <ul>
             <li>
                 <div id="DivIdMenuItem">
-                    <div id="DivIdNeon" onclick="popUpOpen('DivIdPopUpBox')">
+                    <div id="DivIdNeon" onclick="openPopUp('Common')">
                         <div id="DivIdMenuItem">
                             <div id="DivIdIcon">µ</div>
                         </div>

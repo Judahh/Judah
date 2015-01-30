@@ -1,3 +1,10 @@
+function openPopUp(window) {
+    if(document.getElementById("DivIdPopUpBox").innerHTML=="") {
+        request("DivIdPopUpBox", "View/Frames/Common/Common/Window/Common/PopUp/" + window + ".php", "GET");
+    }
+    popUpOpen("DivIdPopUpBox");
+}
+
 function popUpClose(window) {
     fadeOutDivId(window,0.5);
 }

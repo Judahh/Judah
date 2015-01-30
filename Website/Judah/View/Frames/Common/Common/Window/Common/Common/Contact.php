@@ -1,14 +1,24 @@
+<?php
+    include ('../../../../../../Languages/MultilingualText.php');
+?>
+
 <div id="DivIdCode">
     <div id="DivIdProjectTitle">
         <div id="DivIdText">
             <div id="DivIdProjectTitleText">
                 <div id="DivIdTitleTextSize">
-                    Contact
+                    <?php
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "contact");
+                    ?>
                 </div>
             </div>
             <div id="DivIdProjectTitleText2">
                 <div id="DivIdTitleTextSize">
-                    Do you want to hire me?
+                    <?php
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "doYouWantToHireMe");
+                    ?>
                 </div>
             </div>
         </div>
@@ -19,7 +29,10 @@
             <div id="DivHalfBlock">
                 <div id="DivFloatLeft">
                     <div id="DivIdText">
-                        Company:
+                        <?php
+                            $multilingualText = MultilingualText::MultilingualText();
+                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "company");
+                        ?>:
                     </div>
                 </div>
                 <div id="DivFloatLeft">
@@ -30,7 +43,10 @@
             <div id="DivHalfBlock">
                 <div id="DivFloatLeft">
                     <div id="DivIdText">
-                        Name:
+                        <?php
+                            $multilingualText = MultilingualText::MultilingualText();
+                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "name");
+                        ?>:
                     </div>
                 </div>
                 <div id="DivFloatLeft">
@@ -42,7 +58,10 @@
         <div id="DivFullBlock">
             <div id="DivHalfBlock">
                 <div id="DivIdText">
-                    Email:
+                    <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "email");
+                    ?>:
                 </div>
                 <table id="TableIdEmail">
                     <tr id="TrIdTableEmail">
@@ -61,7 +80,10 @@
             </div>
             <div id="DivHalfBlock">
                 <div id="DivIdText">
-                    Phone:
+                    <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "phone");
+                    ?>:
                 </div>
                 <table id="TableIdPhone">
                     <tr id="TrIdTablePhone">
@@ -93,7 +115,10 @@
         </div>
         <div id="DivFullBlock">
             <div id="DivIdText">
-                Address:
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "address");
+                ?>:
             </div>
             <table id="TableIdAddress">
                 <tr id="TrIdTableAddress">
@@ -114,7 +139,10 @@
             <div id="DivThirdBlock">
                 <div id="DivFloatLeft">
                     <div id="DivIdText">
-                        Job Title:
+                        <?php
+                            $multilingualText = MultilingualText::MultilingualText();
+                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "jobTitle");
+                        ?>:
                     </div>
                 </div>
                 <div id="DivFloatLeft">
@@ -124,10 +152,16 @@
                                 <label>
                                     <select id="SelectIdJobTitleType">
                                         <option id="OptionIdJobTitleType">
-                                            Consultant
+                                            <?php
+                                                $multilingualText = MultilingualText::MultilingualText();
+                                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "consultant");
+                                            ?>
                                         </option>
                                         <option id="OptionIdJobTitleType">
-                                            Temporary
+                                            <?php
+                                                $multilingualText = MultilingualText::MultilingualText();
+                                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "temporary");
+                                            ?>
                                         </option>
                                     </select>
                                 </label>
@@ -143,7 +177,10 @@
             <div id="DivThirdBlock">
                 <div id="DivFloatLeft">
                     <div id="DivIdText">
-                        Salary:
+                        <?php
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "salary");
+                        ?>:
                     </div>
                 </div>
                 <div id="DivFloatLeft">
@@ -171,10 +208,16 @@
                                 <label>
                                     <select id="SelectIdSalaryType">
                                         <option id="OptionIdSalaryType">
-                                            /h
+                                            <?php
+                                                $multilingualText = MultilingualText::MultilingualText();
+                                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "perHour");
+                                            ?>
                                         </option>
                                         <option id="OptionIdSalaryType">
-                                            /m
+                                            <?php
+                                                $multilingualText = MultilingualText::MultilingualText();
+                                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "perMonth");
+                                            ?>
                                         </option>
                                     </select>
                                 </label>
@@ -188,7 +231,10 @@
                                 </div>
                                 <div id="DivFloatLeft">
                                     <div id="DivIdText">
-                                        flexible
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "flexible");
+                                        ?>
                                     </div>
                                 </div>
                             </td>
@@ -199,20 +245,72 @@
             <div id="DivThirdBlock">
                 <div id="DivFloatLeft">
                     <div id="DivIdText">
-                        Working Hours:
+                        <?php
+                            $multilingualText = MultilingualText::MultilingualText();
+                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "workingHours");
+                        ?>:
                     </div>
                 </div>
                 <div id="DivFloatLeft">
                     <table id="TableIdWorkingHours">
                         <tr id="TrIdTableWorkingHours">
                             <td id="TdIdTableWeek">
-                                <div id="DivIdSquare"><div id="DivIdText">S</div></div>
-                                <div id="DivIdSquare"><div id="DivIdText">M</div></div>
-                                <div id="DivIdSquare"><div id="DivIdText">T</div></div>
-                                <div id="DivIdSquare"><div id="DivIdText">W</div></div>
-                                <div id="DivIdSquare"><div id="DivIdText">T</div></div>
-                                <div id="DivIdSquare"><div id="DivIdText">F</div></div>
-                                <div id="DivIdSquare"><div id="DivIdText">S</div></div>
+                                <div id="DivIdSquare">
+                                    <div id="DivIdText">
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "sunday");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div id="DivIdSquare">
+                                    <div id="DivIdText">
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "monday");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div id="DivIdSquare">
+                                    <div id="DivIdText">
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "tuesday");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div id="DivIdSquare">
+                                    <div id="DivIdText">
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "wednesday");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div id="DivIdSquare">
+                                    <div id="DivIdText">
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "thursday");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div id="DivIdSquare">
+                                    <div id="DivIdText">
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "friday");
+                                        ?>
+                                    </div>
+                                </div>
+                                <div id="DivIdSquare">
+                                    <div id="DivIdText">
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "saturday");
+                                        ?>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         <tr id="TrIdTableWorkingHours">
@@ -269,7 +367,10 @@
                                 </div>
                                 <div id="DivFloatLeft">
                                     <div id="DivIdText">
-                                        flexible
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "flexible");
+                                        ?>
                                     </div>
                                 </div>
                             </td>
@@ -280,7 +381,10 @@
                                     <tr id="TrIdTableIn">
                                         <td id="TdIdTableIn">
                                             <div id="DivIdText">
-                                                In
+                                                <?php
+                                                    $multilingualText = MultilingualText::MultilingualText();
+                                                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "in");
+                                                ?>:
                                             </div>
                                         </td>
                                         <td id="TdIdTableIn">
@@ -289,7 +393,10 @@
                                         </td>
                                         <td id="TdIdTableIn">
                                             <div id="DivIdText">
-                                                h
+                                                <?php
+                                                    $multilingualText = MultilingualText::MultilingualText();
+                                                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "hour");
+                                                ?>
                                             </div>
                                         </td>
                                     </tr>
@@ -304,7 +411,10 @@
                                 </div>
                                 <div id="DivFloatLeft">
                                     <div id="DivIdText">
-                                        flexible
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "flexible");
+                                        ?>
                                     </div>
                                 </div>
                             </td>
@@ -315,7 +425,10 @@
                                     <tr id="TrIdTableOut">
                                         <td id="TdIdTableOut">
                                             <div id="DivIdText">
-                                                Out
+                                                <?php
+                                                    $multilingualText = MultilingualText::MultilingualText();
+                                                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "out");
+                                                ?>:
                                             </div>
                                         </td>
                                         <td id="TdIdTableOut">
@@ -324,7 +437,10 @@
                                         </td>
                                         <td id="TdIdTableOut">
                                             <div id="DivIdText">
-                                                h
+                                                <?php
+                                                    $multilingualText = MultilingualText::MultilingualText();
+                                                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "hour");
+                                                ?>
                                             </div>
                                         </td>
                                     </tr>
@@ -339,7 +455,10 @@
                                 </div>
                                 <div id="DivFloatLeft">
                                     <div id="DivIdText">
-                                        flexible
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "flexible");
+                                        ?>
                                     </div>
                                 </div>
                             </td>
@@ -352,7 +471,10 @@
         <div id="DivFullBlock">
             <div id="DivFullBlock">
                 <div id="DivIdText">
-                    Description:
+                    <?php
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "description");
+                    ?>:
                 </div>
             </div>
             <div id="DivFullBlock">
@@ -363,7 +485,10 @@
         <div id="DivFullBlock">
             <button id="ButtonIdSend" onclick="sendMail()">
                 <div id="DivIdText">
-                    SEND
+                    <?php
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "send");
+                    ?>
                 </div>
             </button>
         </div>
@@ -381,7 +506,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Social Networks
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "socialMedia");
+                            ?>
                         </div>
                     </div>
                 </div>

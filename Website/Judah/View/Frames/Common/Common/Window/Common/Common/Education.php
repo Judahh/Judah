@@ -1,3 +1,7 @@
+<?php
+    include ('../../../../../../Languages/MultilingualText.php');
+?>
+
 <div id="DivIdCode">
     <div id="DivIdProjectTitle">
         <div id="DivIdText">
@@ -69,7 +73,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Hardware
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "hardware");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -78,7 +85,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Hardware
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "talkingAboutHardware");
+                ?>
             </div>
         </div>
 
@@ -103,7 +113,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Software
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "software");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -112,7 +125,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Software
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "talkingAboutSoftware");
+                ?>
             </div>
         </div>
 
@@ -138,7 +154,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Web
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "web");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -147,7 +166,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Web
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "talkingAboutWeb");
+                ?>
             </div>
         </div>
 
@@ -170,7 +192,10 @@
                 <div id="DivIdText">
                     <div id="DivIdProjectTitleText3">
                         <div id="DivIdTitleTextSize">
-                            Mobile
+                            <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "mobile");
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -179,7 +204,10 @@
 
         <div id="DivIdContent">
             <div id="DivIdText">
-                Talking about Mobile
+                <?php
+                    $multilingualText = MultilingualText::MultilingualText();
+                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Education", "talkingAboutMobile");
+                ?>
             </div>
         </div>
     </div>

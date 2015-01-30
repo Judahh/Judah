@@ -55,6 +55,16 @@
     vertical-align: text-bottom;
 }
 
+#DivIdFullWidthFloat{
+    width: 100%;
+    float: left;
+    position: absolute;
+}
+
+#DivIdFullWidth{
+    width: 100%;
+}
+
 #DivIdTextOverText{
     color: white;
 }
@@ -107,6 +117,10 @@
     float: left;
     width: 25px;
     height: 25px;
+}
+
+#DivId32Height{
+    height: 32px;
 }
 
 #DivFullBlock{

@@ -20,3 +20,7 @@
         include 'Body/Common.php';
     ?>
 </body>
+
+<?php
+    include 'View/Frames/Common/Common/Window/Common/PopUp/Common.php';
+?>

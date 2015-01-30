@@ -508,7 +508,7 @@ function addPhone() {
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
     cell1.innerHTML = '<div id="DivIdRedCircle"><div id="DivIdCircleText" onclick="removePhone('+(element.rows.length-1)+')">-</div></div>';
-    cell2.innerHTML = '<label> <select id="SelectIdPhone"> <option id="OptionIdPhone"> <div id="DivIdIcon">6</div> </option> <option id="OptionIdPhone">C </option> </select> </label>';
+    cell2.innerHTML = '<label> <select id="SelectIdPhone"> <option id="OptionIdPhone"> <div id="DivIdIcon">6</div> </option> <option id="OptionIdPhone"><div id="DivIdIcon">´</div></option> </select> </label>';
     cell3.innerHTML = '<input id="InputIdPhone"></input>';
     cell4.innerHTML = '<div id="DivIdBlueCircle"><div id="DivIdCircleText" onclick="addPhone()">+</div></div>';
 }

@@ -1,3 +1,11 @@
+function changeLanguageTemporary(language) {
+    document.getElementById("DivIdSelectedLanguage").innerHTML=document.getElementById("DivIdSelectedLanguage").innerHTML.split(": ")[0]+": "+language;
+}
+
+function changeLanguageAndPopUpClose(window) {
+    popUpClose(window);
+}
+
 function openPopUp(window) {
     if(document.getElementById("DivIdPopUpBox").innerHTML=="") {
         request("DivIdPopUpBox", "View/Frames/Common/Common/Window/Common/PopUp/" + window + ".php", "GET");

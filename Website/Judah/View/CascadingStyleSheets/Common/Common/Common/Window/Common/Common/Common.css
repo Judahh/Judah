@@ -226,7 +226,12 @@
     box-sizing: border-box;
 }
 
+#ButtonIdSimple{
+    cursor: pointer;
+}
+
 #ButtonIdSend{
+    cursor: pointer;
     background-color: dodgerblue;
     width: 100%;
 }

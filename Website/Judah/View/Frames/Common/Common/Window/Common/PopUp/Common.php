@@ -33,22 +33,28 @@
         <div id="DivIdPopUpBody">
             <div id="DivIdPopUpBodyWrap">
                 <div id="DivIdHalf">
-                    <div id="DivIdNeon">
-                        <div id="DivIdText">
-                            -English/USA
+                    <button id="ButtonIdSimple" onclick="changeLanguageTemporary('English/USA')">
+                        <div id="DivIdNeon">
+                            <div id="DivIdText">
+                                -English/USA
+                            </div>
                         </div>
-                    </div>
-                    <div id="DivIdNeon">
-                        <div id="DivIdText">
-                            -Português/Brasil
+                    </button>
+                    <button id="ButtonIdSimple" onclick="changeLanguageTemporary('Português/Brasil')">
+                        <div id="DivIdNeon">
+                            <div id="DivIdText">
+                                -Português/Brasil
+                            </div>
                         </div>
-                    </div>
+                    </button>
                     <div id="DivIdNeon">
                         <div id="DivIdText">
-                            -<?php
-                                $multilingualText = MultilingualText::MultilingualText();
-                                echo $multilingualText->getMultilingualTextFromWindowFromPopUp("English-USA", "Common", "current");
-                            ?>: English/USA
+                            <div id="DivIdSelectedLanguage">
+                                -<?php
+                                    $multilingualText = MultilingualText::MultilingualText();
+                                    echo $multilingualText->getMultilingualTextFromWindowFromPopUp("English-USA", "Common", "selected");
+                                ?>: English/USA
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,24 +64,28 @@
         <div id="DivIdPopUpFooter">
             <div id="DivIdHalf">
                 <div id="DivIdPopUpOK">
-                    <div id="DivIdNeon" onclick="popUpClose('DivIdPopUpBox')">
-                        <div id="DivIdText">
-                            <?php
-                                $multilingualText = MultilingualText::MultilingualText();
-                                echo $multilingualText->getMultilingualTextFromWindowFromPopUp("English-USA", "Common", "oK");
-                            ?>
+                    <button id="ButtonIdSimple" onclick="changeLanguageAndPopUpClose('DivIdPopUpBox')">
+                        <div id="DivIdNeon">
+                            <div id="DivIdText">
+                                <?php
+                                    $multilingualText = MultilingualText::MultilingualText();
+                                    echo $multilingualText->getMultilingualTextFromWindowFromPopUp("English-USA", "Common", "oK");
+                                ?>
+                            </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
                 <div id="DivIdPopUpCancel">
-                    <div id="DivIdNeon" onclick="popUpClose('DivIdPopUpBox')">
-                        <div id="DivIdText">
-                            <?php
+                    <button id="ButtonIdSimple" onclick="popUpClose('DivIdPopUpBox')">
+                        <div id="DivIdNeon">
+                            <div id="DivIdText">
+                                <?php
                                 $multilingualText = MultilingualText::MultilingualText();
                                 echo $multilingualText->getMultilingualTextFromWindowFromPopUp("English-USA", "Common", "cancel");
-                            ?>
+                                ?>
+                            </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>

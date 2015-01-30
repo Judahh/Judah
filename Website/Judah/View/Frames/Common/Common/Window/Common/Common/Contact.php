@@ -47,14 +47,14 @@
                 <table id="TableIdEmail">
                     <tr id="TrIdTableEmail">
                         <td id="TdIdTableCircle">
-                            <div id="DivIdRedCircle"><div id="DivIdCircleText">-</div></div>
+
                         </td>
                         <td id="TdIdTableEmail">
                             <input id="InputIdEmail">
                             </input>
                         </td>
                         <td id="TdIdTableCircle">
-                            <div id="DivIdBlueCircle"><div id="DivIdCircleText">+</div></div>
+                            <div id="DivIdBlueCircle"><div id="DivIdCircleText" onclick="addEmail()">+</div></div>
                         </td>
                     </tr>
                 </table>
@@ -66,7 +66,7 @@
                 <table id="TableIdPhone">
                     <tr id="TrIdTablePhone">
                         <td id="TdIdTableCircle">
-                            <div id="DivIdRedCircle"><div id="DivIdCircleText">-</div></div>
+
                         </td>
                         <td id="TdIdTablePhone">
                             <label>
@@ -85,7 +85,7 @@
                             </input>
                         </td>
                         <td id="TdIdTableCircle">
-                            <div id="DivIdBlueCircle"><div id="DivIdCircleText">+</div></div>
+                            <div id="DivIdBlueCircle"><div id="DivIdCircleText" onclick="addPhone()">+</div></div>
                         </td>
                     </tr>
                 </table>
@@ -98,14 +98,14 @@
             <table id="TableIdAddress">
                 <tr id="TrIdTableAddress">
                     <td id="TdIdTableCircle">
-                        <div id="DivIdRedCircle"><div id="DivIdCircleText">-</div></div>
+
                     </td>
                     <td id="TdIdTableAddress">
                         <input id="InputIdAddress">
                         </input>
                     </td>
                     <td id="TdIdTableCircle">
-                        <div id="DivIdBlueCircle"><div id="DivIdCircleText">+</div></div>
+                        <div id="DivIdBlueCircle"><div id="DivIdCircleText" onclick="addAddress()">+</div></div>
                     </td>
                 </tr>
             </table>

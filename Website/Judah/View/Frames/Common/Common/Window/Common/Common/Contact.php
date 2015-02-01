@@ -59,8 +59,8 @@
             <div id="DivHalfBlock">
                 <div id="DivIdText">
                     <?php
-                    $multilingualText = MultilingualText::MultilingualText();
-                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "email");
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "email");
                     ?>:
                 </div>
                 <table id="TableIdEmail">
@@ -81,8 +81,8 @@
             <div id="DivHalfBlock">
                 <div id="DivIdText">
                     <?php
-                    $multilingualText = MultilingualText::MultilingualText();
-                    echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "phone");
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "phone");
                     ?>:
                 </div>
                 <table id="TableIdPhone">
@@ -93,11 +93,17 @@
                         <td id="TdIdTablePhone">
                             <label>
                                 <select id="SelectIdPhone">
-                                    <option id="OptionIdPhone">
-                                        <div id="DivIdIcon">6</div>
+                                    <option class="OptionClassPhone" id="OptionIdPhone">
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "mobile");
+                                        ?>
                                     </option>
-                                    <option id="OptionIdPhone">
-                                        <div id="DivIdIcon">´</div>
+                                    <option class="OptionClassPhone" id="OptionIdPhone">
+                                        <?php
+                                            $multilingualText = MultilingualText::MultilingualText();
+                                            echo $multilingualText->getMultilingualTextFromWindowFromCommon("English-USA", "Contact", "landline");
+                                        ?>
                                     </option>
                                 </select>
                             </label>
@@ -495,9 +501,9 @@
         <div id="DivIdDivisor">
             <div id="DivIdDivisorA">
                 <div id="DivIdNeon">
-                    <div id="DivIdMenuItem">
-                        <div id="DivIdIcon">
-                            <div id="DivIdFontBig">¶</div>
+                    <div id="DivId40Height">
+                        <div id="DivIdIconSocialMedia">
+                            <div id="DivIdFontBig">2</div>
                         </div>
                     </div>
                 </div>
@@ -566,6 +572,34 @@
                         <div id="DivIdNeon">
                             <a id="DivIdIconSocialMedia2" href="http://instagram.com/judahholanda/" target="_blank">
                                 i
+                            </a>
+                        </div>
+                    </div>
+                    <div id="DivFloatLeft">
+                        <div id="DivIdNeon">
+                            <a id="DivIdIconSocialMedia2" href="https://play.spotify.com/user/12142311218" target="_blank">
+                                s
+                            </a>
+                        </div>
+                    </div>
+                    <div id="DivFloatLeft" style="height: 45px; padding-left: 2px; padding-right: 2px;">
+                        <div id="DivIdNeon">
+                            <a id="DivIdIconSocialMedia4" href="http://grooveshark.com/#!/judah7" target="_blank">
+                                
+                            </a>
+                        </div>
+                    </div>
+                    <div id="DivFloatLeft" style="height: 45px; padding-top: 3px; padding-left: 3px; padding-right: 3px;">
+                        <div id="DivIdNeon">
+                            <a id="DivIdIcon" href="https://account.xbox.com/en-US/Profile?gamerTag=HELLSING4ever" target="_blank" style="font-size: 34px;">
+                                ¤
+                            </a>
+                        </div>
+                    </div>
+                    <div id="DivFloatLeft" style="height: 45px; padding-top: 3px; padding-left: 2px; padding-left: 2px;">
+                        <div id="DivIdNeon">
+                            <a id="DivIdIcon" href="http://us.playstation.com/publictrophy/index.htm?onlinename=MOHHAAMMED" target="_blank" style="font-size: 34px;">
+                                £
                             </a>
                         </div>
                     </div>

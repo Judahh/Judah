@@ -198,6 +198,8 @@ function request(element,file,format) {
         cached=cached2;
     }
 
+    cached=null;
+
     //alert("Cached of "+file+"=("+cached+")");
 
     if (cached==null||cached==''||cached==undefined) {
@@ -232,14 +234,13 @@ function request(element,file,format) {
             if (ajaxRequest.readyState == 4) {
                 var ajaxDisplay = document.getElementById(element);
                 ajaxDisplay.innerHTML = ajaxRequest.responseText;
+                sessionStorage.setItem(file, ajaxRequest.responseText);
+                domStorage[file]=ajaxRequest.responseText;
             }
         }
 
         ajaxRequest.open(format, file, true);
         ajaxRequest.send();
-
-        sessionStorage.setItem(file, ajaxRequest.responseText);
-        domStorage[file]=ajaxRequest.responseText;
     }else{
         document.getElementById(element).innerHTML=cached;
     }
@@ -261,11 +262,11 @@ function transferComplete(evt) {
 }
 
 function transferFailed(evt) {
-    alert("An error occurred while transferring the file.");
+    alert(getMultilingualTextFromWindowFromPopUp("English-USA", "Error", "AnErrorOccurredWhileTransferringTheFile"));
 }
 
 function transferCanceled(evt) {
-    alert("The transfer has been canceled by the user.");
+    alert(getMultilingualTextFromWindowFromPopUp("English-USA", "Error", "TheTransferHasBeenCanceledByTheUser"));
 }
 
 function handleCacheEvent(evt) {
@@ -284,8 +285,8 @@ function handleCacheEvent(evt) {
 }
 
 function handleCacheError(evt) {
-    alert('Error: Cache failed to update!');
-};
+    alert(getMultilingualTextFromWindowFromPopUp("English-USA", "Error", "cacheFailedToUpdate"));
+}
 
 function startTypeWorker() {
     if(typeof(Worker) !== "undefined") {
@@ -303,7 +304,7 @@ function startTypeWorker() {
             }
         };
     } else {
-        alert("Sorry, your browser does not support Web Workers...");
+        alert(getMultilingualTextFromWindowFromPopUp("English-USA", "Error", "yourBrowserDoesNotSupportWebWorkers"));
     }
 }
 
@@ -368,7 +369,7 @@ function sendMail() {
 
     var jobTitle=document.getElementById("InputIdJobTitle").value+"("+e.options[e.selectedIndex].value+")";
 
-    fullDescription+="Job:"+jobTitle+"\n";
+    fullDescription+=getMultilingualTextFromWindowFromPopUp("English-USA", "Email", "job")+":"+jobTitle+"\n";
 
     e=document.getElementById("SelectIdSalaryCoin");
     var e2=document.getElementById("SelectIdSalaryType");
@@ -428,13 +429,8 @@ function sendMail() {
     fullDescription+="Phone:\n";
 
     for(var i=0;i<element.rows.length;i++){
-
         fullDescription+=element.rows[i].cells[2].getElementsByTagName("input")[0].value;
-        if(element.rows[i].cells[1].getElementsByTagName("select")[0].selectedIndex==0){
-            fullDescription+=" (landline)\n";
-        }else{
-            fullDescription+=" (mobile)\n";
-        }
+        fullDescription+=" ("+element.rows[i].cells[1].getElementsByTagName("select")[0].selectedIndex.value+")\n";
     }
 
     element=document.getElementById("TableIdAddress");
@@ -504,7 +500,7 @@ function addPhone() {
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
     cell1.innerHTML = '<div id="DivIdRedCircle"><div id="DivIdCircleText" onclick="removePhone('+(element.rows.length-1)+')">-</div></div>';
-    cell2.innerHTML = '<label> <select id="SelectIdPhone"> <option id="OptionIdPhone"> <div id="DivIdIcon">6</div> </option> <option id="OptionIdPhone"><div id="DivIdIcon">´</div></option> </select> </label>';
+    cell2.innerHTML = '<label><select id="SelectIdPhone"><option id="OptionIdPhone">mobile</option><option id="OptionIdPhone">landline</option></select></label>';
     cell3.innerHTML = '<input id="InputIdPhone"></input>';
     cell4.innerHTML = '<div id="DivIdBlueCircle"><div id="DivIdCircleText" onclick="addPhone()">+</div></div>';
 }

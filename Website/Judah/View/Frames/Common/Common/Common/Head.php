@@ -10,10 +10,14 @@
     <link href="View/CascadingStyleSheets/Common/Common/Common/Window/Common/PopUp/Common.css" rel="stylesheet" media="all" type="text/css">
 
     <link href="View/CascadingStyleSheets/Common/Common/Common/Window/Common/Common/Common.css" rel="stylesheet" media="all" type="text/css">
+    <link href="View/CascadingStyleSheets/Mobile/Common/Common/Window/Common/Common/CommonSizeA.css" rel="stylesheet" media="(max-width: 500px)" type="text/css">
+    <link href="View/CascadingStyleSheets/Mobile/Common/Common/Window/Common/Common/CommonSizeB.css" rel="stylesheet" media="(max-width: 600px)" type="text/css">
+    <link href="View/CascadingStyleSheets/Mobile/Common/Common/Window/Common/Common/CommonSizeC.css" rel="stylesheet" media="(max-width: 850px)" type="text/css">
 
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Header/Common.css" rel="stylesheet" media="all" type="text/css">
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Common.css" rel="stylesheet" media="all" type="text/css">
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Common/Common.css" rel="stylesheet" media="all" type="text/css">
+    <link href="View/CascadingStyleSheets/Mobile/Common/Common/Common/Common/Common.css" rel="stylesheet" media="(max-width: 600px)" type="text/css">
 
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Body/Image/Common.css" rel="stylesheet" media="all" type="text/css">
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Body/Video/Common.css" rel="stylesheet" media="all" type="text/css">

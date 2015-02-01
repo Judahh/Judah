@@ -38,6 +38,33 @@
 }
 
 @font-face {
+    font-family: "FontIconSocialMedia3";
+    src: url("../../../../../../Fonts/MonoSocialIconsFont-1.10.otf");
+    src: url("../../../../../../Fonts/MonoSocialIconsFont-1.10.woff") format('woff');
+    /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontIconSocialMedia4";
+    src: url("../../../../../../Fonts/pictonic.ttf");
+    src: url("../../../../../../Fonts/pictonic.woff") format('woff');
+    /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    src: url("../../../../../../Fonts/fontawesome-webfont.ttf");
+    src: url("../../../../../../Fonts/fontawesome-webfont.woff") format('woff');
+    /*src: url("../../../../../../Fonts/SocialicoPlus.ttf")  format(‘truetype’);*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: "FontFuturisticI";
     src: url("../../../../../../Fonts/FuturisticFontI.otf");
     src: url("../../../../../../Fonts/FuturisticFontI.woff") format('woff');
@@ -541,6 +568,49 @@ button, button:active, button:after, button:before {
     font-family: "FontIconSocialMedia2";
     padding: 5px;
     font-size: 40px;
+}
+
+#DivIdIconSocialMedia3{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    font-family: "FontIconSocialMedia3";
+    padding: 5px;
+    font-size: 40px;
+}
+
+#DivIdIconSocialMedia4{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    font-family: "FontIconSocialMedia4";
+    padding: 5px;
+    font-size: 28px;
+}
+
+#DivIdIconAwesome{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    font-family: "FontAwesome";
+    padding: 5px;
+    font-size: 28px;
+}
+
+#DivIdFont35px{
+    font-size: 35px;
 }
 
 #DivIdIcon{
@@ -1229,6 +1299,14 @@ input[type=checkbox] {
 }
 
 select {
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+
     padding:5px;
     margin: 0;
     color:black;
@@ -1240,7 +1318,6 @@ select {
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
-    cursor:pointer;
     -webkit-transition: 0.5s linear;
     -moz-transition: 0.5s linear;
     -ms-transition: 0.5s linear;

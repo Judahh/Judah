@@ -119,6 +119,10 @@
     height: 25px;
 }
 
+#DivId40Height{
+    height: 40px;
+}
+
 #DivId32Height{
     height: 32px;
 }
@@ -126,7 +130,6 @@
 #DivFullBlock{
     width: 100%;
     display: block;
-    float: none;
 }
 
 #DivHalfBlock{
@@ -142,6 +145,20 @@
 #DivQuarterBlock{
     width: 25%;
     float: left;
+}
+
+#DivTextWhoAmI{
+    width: 75%;
+    float: right;
+}
+
+#DivMyPicture{
+    width: 25%;
+    float: left;
+}
+
+#DivFloatRight{
+    float: right;
 }
 
 #DivFloatLeft{

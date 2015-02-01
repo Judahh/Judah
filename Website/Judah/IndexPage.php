@@ -11,4 +11,5 @@
     <script src="View/JavaScript/Common/Common/Common/OnWindowLoad.js"></script>
     <script src="View/JavaScript/Common/Common/Common/Body/Video/Common.js"></script>
     <script src="View/JavaScript/Common/Common/Common/Body/PopUp/Common.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Body/Language/MultilingualText.js"></script>
 </html>

@@ -55,7 +55,7 @@
                             <div id="DivIdSelectedLanguage">
                                 <div id="DivIdTextSelected"><?php
                                         $multilingualText = MultilingualText::MultilingualText();
-                                        echo "-".$multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Common", "selected").": ".$language;
+                                        echo "-".$multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Common", "selected").": ".$multilingualText->languageToNative($language);
                                 ?></div>
                             </div>
                         </div>

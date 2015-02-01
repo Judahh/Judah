@@ -64,4 +64,22 @@ class MultilingualText {
     public function getMultilingualTextFromWindowFromPopUp($stringLanguage, $stringPage, $stringVariable){
         return $this->getMultilingualTextFromWindow($stringLanguage, "PopUp", $stringPage, $stringVariable);
     }
+
+    public function languageToNative($language){
+        switch ($language){
+            case "Portuguese-Brazil":
+                return "Português/Brasil";
+            default:
+                return "English/USA";
+        }
+    }
+
+    public function languageToEnglish($language){
+        switch ($language){
+            case "Português/Brasil":
+                return "Portuguese-Brazil";
+            default:
+                return "English-USA";
+        }
+    }
 } 

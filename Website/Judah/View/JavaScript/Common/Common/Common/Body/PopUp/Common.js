@@ -58,7 +58,7 @@ function changeLanguageTemporary(language) {
     document.getElementById("DivIdSelectedLanguage").innerHTML=document.getElementById("DivIdSelectedLanguage").innerHTML.split(": ")[0]+": "+language;
 }
 
-function languageToTative(language){
+function languageToNative(language){
     switch (language){
         case "Portuguese-Brazil":
             return "Português/Brasil";
@@ -78,19 +78,19 @@ function languageToEnglish(language){
 
 function changeLanguageAndPopUpClose(window) {
     var language = document.getElementById("DivIdSelectedLanguage").innerHTML.split(": ")[1].split("</div>")[0];
-
     language=languageToEnglish(language);
     setCookie("language",language,5);
 
     testAjax();
 
     sessionStorage.clear();
-    var domStorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
-    if(domStorage!=null) {
-        domStorage.clear();
-    }
+    localStorage.clear();
+    //var domStorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
+    //if(domStorage!=null) {
+    //    domStorage=null;//.clear();
+    //}
 
-    document.getElementById("DivIdPopUpBox").innerHTML==""
+    document.getElementById("DivIdPopUpBox").innerHTML="";
 
     goToPage(document.getElementById("DivIdCode").children[0].id.split("DivId")[1]);
 
@@ -100,7 +100,6 @@ function changeLanguageAndPopUpClose(window) {
 function openPopUp(window) {
     if(document.getElementById("DivIdPopUpBox").innerHTML=="") {
         request("DivIdPopUpBox", "View/Frames/Common/Common/Window/Common/PopUp/" + window + ".php", "GET");
-        alert("NOVA!");
     }
     popUpOpen("DivIdPopUpBox");
 }

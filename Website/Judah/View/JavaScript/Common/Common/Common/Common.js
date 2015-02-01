@@ -369,7 +369,7 @@ function sendMail() {
 
     var jobTitle=document.getElementById("InputIdJobTitle").value+"("+e.options[e.selectedIndex].value+")";
 
-    fullDescription+=getMultilingualTextFromWindowFromPopUp("English-USA", "Email", "job")+":"+jobTitle+"\n";
+    fullDescription+="Job"+":"+jobTitle+"\n";
 
     e=document.getElementById("SelectIdSalaryCoin");
     var e2=document.getElementById("SelectIdSalaryType");

@@ -62,10 +62,20 @@ function changeLanguageTemporary(language) {
     document.getElementById("DivIdSelectedLanguage").innerHTML=document.getElementById("DivIdSelectedLanguage").innerHTML.split(": ")[0]+": "+language;
 }
 
+function languageToEnglish(language){
+    switch (language){
+        case "Português/Brasil":
+            return "Portuguese-Brazil";
+        default:
+            return "English-USA";
+    }
+}
+
 function changeLanguageAndPopUpClose(window) {
     var language = document.getElementById("DivIdSelectedLanguage").innerHTML.split(": ")[1].split("</div>")[0];
     alert("INICIO"+language+"FIM");
     alert("INICIO"+document.getElementById("DivIdCode").children[0].id.split("DivId")[1]+"FIM");
+    language=languageToEnglish(language);
     setCookie("language",language,5);
 
     testAjax();

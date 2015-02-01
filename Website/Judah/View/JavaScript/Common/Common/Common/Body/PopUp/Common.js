@@ -79,20 +79,22 @@ function languageToEnglish(language){
 function changeLanguageAndPopUpClose(window) {
     var language = document.getElementById("DivIdSelectedLanguage").innerHTML.split(": ")[1].split("</div>")[0];
     language=languageToEnglish(language);
-    setCookie("language",language,5);
+    if(language!=getCookie("language")) {
+        setCookie("language", language, 5);
 
-    testAjax();
+        testAjax();
 
-    sessionStorage.clear();
-    localStorage.clear();
-    //var domStorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
-    //if(domStorage!=null) {
-    //    domStorage=null;//.clear();
-    //}
+        sessionStorage.clear();
+        localStorage.clear();
+        //var domStorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
+        //if(domStorage!=null) {
+        //    domStorage=null;//.clear();
+        //}
 
-    document.getElementById("DivIdPopUpBox").innerHTML="";
+        document.getElementById("DivIdPopUpBox").innerHTML = "";
 
-    goToPage(document.getElementById("DivIdCode").children[0].id.split("DivId")[1]);
+        goToPage(document.getElementById("DivIdCode").children[0].id.split("DivId")[1]);
+    }
 
     popUpClose(window);
 }

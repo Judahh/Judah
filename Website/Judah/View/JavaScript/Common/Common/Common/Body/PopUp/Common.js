@@ -46,11 +46,7 @@ function testAjax(){
     }
 
     // Open the AJAX connection.
-    ajaxRequest.open(
-        "GET",
-        ("./get.cfm?_=" + (new Date()).getTime()),
-        false
-    );
+    ajaxRequest.open("GET", "indexPage.php", false);
 
     // Send the request. Since this request is being made
     // *Synchronously*, we don't have to keep a ready-state
@@ -60,6 +56,15 @@ function testAjax(){
 
 function changeLanguageTemporary(language) {
     document.getElementById("DivIdSelectedLanguage").innerHTML=document.getElementById("DivIdSelectedLanguage").innerHTML.split(": ")[0]+": "+language;
+}
+
+function languageToTative(language){
+    switch (language){
+        case "Portuguese-Brazil":
+            return "Português/Brasil";
+        default:
+            return "English/USA";
+    }
 }
 
 function languageToEnglish(language){
@@ -73,16 +78,17 @@ function languageToEnglish(language){
 
 function changeLanguageAndPopUpClose(window) {
     var language = document.getElementById("DivIdSelectedLanguage").innerHTML.split(": ")[1].split("</div>")[0];
-    alert("INICIO"+language+"FIM");
-    alert("INICIO"+document.getElementById("DivIdCode").children[0].id.split("DivId")[1]+"FIM");
+
     language=languageToEnglish(language);
     setCookie("language",language,5);
 
     testAjax();
 
-    var domStorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
-    domStorage.clear;
     sessionStorage.clear();
+    var domStorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
+    if(domStorage!=null) {
+        domStorage.clear();
+    }
 
     document.getElementById("DivIdPopUpBox").innerHTML==""
 
@@ -94,6 +100,7 @@ function changeLanguageAndPopUpClose(window) {
 function openPopUp(window) {
     if(document.getElementById("DivIdPopUpBox").innerHTML=="") {
         request("DivIdPopUpBox", "View/Frames/Common/Common/Window/Common/PopUp/" + window + ".php", "GET");
+        alert("NOVA!");
     }
     popUpOpen("DivIdPopUpBox");
 }

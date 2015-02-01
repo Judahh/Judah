@@ -198,8 +198,7 @@ function request(element,file,format) {
         cached=cached2;
     }
 
-    cached=null;
-
+    //cached=null;
     //alert("Cached of "+file+"=("+cached+")");
 
     if (cached==null||cached==''||cached==undefined) {

@@ -39,8 +39,21 @@
                     <div id="DivIdText">
                         <div id="DivIdTextTalkingAboutMe">
                             <?php
-                            echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "talkingAboutMe");
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "talkingAboutMe");
                             ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="DivTextWhoAmI">
+                    <div id="DivIdText">
+                        <div id="DivIdProjectTitleText">
+                            <div id="DivIdTitleTextSize">
+                                <div id="DivIdTextThinkDifferentTitle">
+                                    <?php
+                                        echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "thinkDifferentTitle");
+                                    ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -57,7 +70,7 @@
                     <div id="DivIdText">
                         <div id="DivIdTextThinkDifferent">
                             <?php
-                            echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "thinkDifferent");
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "thinkDifferent");
                             ?>
                         </div>
                     </div>

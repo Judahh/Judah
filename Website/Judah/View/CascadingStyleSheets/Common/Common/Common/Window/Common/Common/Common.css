@@ -151,6 +151,14 @@
 #DivTextWhoAmI{
 }
 
+#DivIdTextTalkingAboutMe, #DivIdTextThinkDifferent{
+    text-align: justify;
+}
+
+#DivIdTextThinkDifferentTitle {
+    text-align: center;
+}
+
 #DivMyPicture{
     width:25%;
     float: left;

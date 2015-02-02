@@ -130,6 +130,7 @@
 #DivFullBlock{
     width: 100%;
     display: block;
+    overflow: auto;
 }
 
 #DivHalfBlock{

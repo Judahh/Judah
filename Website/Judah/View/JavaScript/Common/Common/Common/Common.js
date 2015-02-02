@@ -491,15 +491,24 @@ function addEmail() {
     cell3.innerHTML = '<div id="DivIdBlueCircle"><div id="DivIdCircleText" onclick="addEmail()">+</div></div>';
 }
 
+function phoneTypes(){
+    var element=document.getElementById("TableIdPhone").children[0].children[0].children[1].children[0].children[0];
+    var types=["",""];
+    types[0]=customTrim(element.children[0].innerHTML);
+    types[1]=customTrim(element.children[1].innerHTML);
+    return types;
+}
+
 function addPhone() {
     var element=document.getElementById("TableIdPhone");
+    var types=phoneTypes();
     var row=addRow(element, "Phone");
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
     var cell4 = row.insertCell(3);
     cell1.innerHTML = '<div id="DivIdRedCircle"><div id="DivIdCircleText" onclick="removePhone('+(element.rows.length-1)+')">-</div></div>';
-    cell2.innerHTML = '<label><select id="SelectIdPhone"><option id="OptionIdPhone">mobile</option><option id="OptionIdPhone">landline</option></select></label>';
+    cell2.innerHTML = '<label><select id="SelectIdPhone"><option id="OptionIdPhone">'+types[0]+'</option><option id="OptionIdPhone">'+types[1]+'</option></select></label>';
     cell3.innerHTML = '<input id="InputIdPhone"></input>';
     cell4.innerHTML = '<div id="DivIdBlueCircle"><div id="DivIdCircleText" onclick="addPhone()">+</div></div>';
 }

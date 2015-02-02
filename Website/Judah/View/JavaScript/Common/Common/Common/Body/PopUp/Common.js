@@ -83,7 +83,6 @@ function changeLanguageAndPopUpClose(window) {
         setCookie("language", language, 5);
 
         testAjax();
-
         sessionStorage.clear();
         localStorage.clear();
         //var domStorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);

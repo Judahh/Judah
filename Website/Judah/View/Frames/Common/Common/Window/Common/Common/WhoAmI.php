@@ -31,18 +31,18 @@
 
         <div id="DivIdTableCodeWrap">
             <div id="DivFullBlock">
+                <div id="DivMyPicture">
+                    <img id="ImgIdPicture" src="View/Images/Pictures/10269429_761463870605004_4764397887348042944_n.jpg">
+                    </img>
+                </div>
                 <div id="DivTextWhoAmI">
                     <div id="DivIdText">
                         <div id="DivIdTextTalkingAboutMe">
                             <?php
-                                echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "talkingAboutMe");
+                            echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "talkingAboutMe");
                             ?>
                         </div>
                     </div>
-                </div>
-                <div id="DivMyPicture">
-                    <img id="ImgIdPicture" src="View/Images/Pictures/10269429_761463870605004_4764397887348042944_n.jpg">
-                    </img>
                 </div>
             </div>
             <div id="DivFullBlock">

@@ -25,20 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IndexPage.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IndexPage.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IndexPage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="300">
-              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0608931" vertical-offset="0" max-vertical-offset="739">
+              <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Portuguese-Brazil.lang" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Portuguese-Brazil.lang" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/Languages/Window/Common/Skills/Portuguese-Brazil.lang">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8311856" vertical-offset="0" max-vertical-offset="840">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
               <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
               <folding />
             </state>
@@ -1371,18 +1371,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IndexPage.php">
+    <entry file="file://$PROJECT_DIR$/View/Languages/Window/Common/Skills/Portuguese-Brazil.lang">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="300">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
+          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Languages/Window/Common/Skills/Portuguese-Brazil.lang">
+    <entry file="file://$PROJECT_DIR$/IndexPage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8311856" vertical-offset="0" max-vertical-offset="840">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0608931" vertical-offset="0" max-vertical-offset="739">
+          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
           <folding />
         </state>
       </provider>

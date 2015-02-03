@@ -36,7 +36,7 @@
                     </img>
                 </div>
                 <div id="DivTextWhoAmI">
-                    <div id="DivIdText">
+                    <div id="DivIdTextBasic">
                         <div id="DivIdTextTalkingAboutMe">
                             <?php
                                 echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "talkingAboutMe");
@@ -67,7 +67,7 @@
             </div>
             <div id="DivFullBlock">
                 <div id="DivTextWhoAmI2">
-                    <div id="DivIdText">
+                    <div id="DivIdTextBasic">
                         <div id="DivIdTextThinkDifferent">
                             <?php
                                 echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "thinkDifferent");

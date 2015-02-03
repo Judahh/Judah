@@ -1,11 +1,63 @@
 education=\0"Education"\0;
 diplomas/Certificates=\0"Diplomas/Certificates"\0;
-talkingAboutDiplomas/Certificates=\0"Talking about Diplomas/Certificates"\0;
+talkingAboutDiplomas/Certificates=\0"
+- Majoring in Computer Engineering at the Universidade de Fortaleza - UNIFOR<br>
+- Circuit Board Design with Altium<br>
+- Programming in Java<br>
+- Microcontrollers PIC 18 - Programming in ANSI C<br>
+- Mobile Devices Programming (IOS)<br>
+<br><br>
+"\0;
 hardware=\0"Hardware"\0;
-talkingAboutHardware=\0"Talking about Hardware"\0;
+talkingAboutHardware=\0"
+Microcontrollers and Microprocessors:<br>
+- Freescale (ARM/HCS12)<br>
+- Microchip (PIC)<br>
+<br><br>
+Development Platforms:<br>
+- BeagleBone<br>
+- Raspberry<br>
+- Freedom<br>
+- KWIKSTIK<br>
+<br><br>
+Circuit Board Design:<br>
+- Altium<br>
+<br><br>
+HDL:<br>
+- Verilog<br>
+- VHDL<br>
+<br><br>
+"\0;
 software=\0"Software"\0;
-talkingAboutSoftware=\0"Talking about Software"\0;
+talkingAboutSoftware=\0"
+Programming Languages:<br>
+- C (ANSI)<br>
+- C++<br>
+- C#<br>
+- objetive-C<br>
+- Java<br>
+<br><br>
+Databases:<br>
+- MySQL<br>
+- PostgreSQL<br>
+- Oracle<br>
+<br><br>
+"\0;
 web=\0"Web"\0;
-talkingAboutWeb=\0"Talking about Web"\0;
+talkingAboutWeb=\0"
+Web Programming:<br>
+- Java<br>
+- PHP<br>
+<br><br>
+Web Design:<br>
+- CSS3<br>
+- HTML5<br>
+<br><br>
+"\0;
 mobile=\0"Mobile"\0;
-talkingAboutMobile=\0"Talking about Mobile"\0;
+talkingAboutMobile=\0"
+Mobile Devices Programming:<br>
+- IOS (objetive-C)<br>
+- Android (Java)<br>
+<br><br>
+"\0;

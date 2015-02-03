@@ -316,6 +316,18 @@ button, button:active, button:after, button:before {
     opacity: 0.5;
 }
 
+#DivIdTextBasic{
+    font-smooth:always;
+    font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    font-family: "FontFuturisticI";
+    padding: 5px;
+    font-size: 20px;
+}
+
 #DivIdText{
     font-smooth:always;
     font-smoothing: antialiased;

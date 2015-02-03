@@ -161,8 +161,14 @@
                                         <select id="SelectIdJobTitleType">
                                             <option id="OptionIdJobTitleType">
                                                 <?php
-                                                    $multilingualText = MultilingualText::MultilingualText();
-                                                    echo $multilingualText->getMultilingualTextFromWindowFromCommon($language, "Contact", "consultant");
+                                                $multilingualText = MultilingualText::MultilingualText();
+                                                echo $multilingualText->getMultilingualTextFromWindowFromCommon($language, "Contact", "regular");
+                                                ?>
+                                            </option>
+                                            <option id="OptionIdJobTitleType">
+                                                <?php
+                                                $multilingualText = MultilingualText::MultilingualText();
+                                                echo $multilingualText->getMultilingualTextFromWindowFromCommon($language, "Contact", "consultant");
                                                 ?>
                                             </option>
                                             <option id="OptionIdJobTitleType">

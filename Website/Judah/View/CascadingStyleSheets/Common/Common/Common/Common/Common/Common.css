@@ -360,16 +360,21 @@ button, button:active, button:after, button:before {
 #DivIdHandIconOn, #DivIdHandIcon:hover #DivIdHandIconOff, #DivIdHandIcon #DivIdHandIconOn{
     visibility: hidden;
     height: 0px;
+    width: 0px;
+    float: left;
 }
 
 #DivIdHandIconOff, #DivIdHandIcon:hover #DivIdHandIconOn, #DivIdHandIcon #DivIdHandIconOff{
     visibility: visible;
     height: 100%;
+    width: auto;
+    float: left;
 }
 
 #DivIdConsoleIcon:hover #DivIdConsoleIconOn{
     visibility: hidden;
     height: 0px;
+    width: 0px;
 
     -webkit-animation: consoleOn 1s;
     -moz-animation: consoleOn 1s;
@@ -393,6 +398,7 @@ button, button:active, button:after, button:before {
 #DivIdConsoleIcon:hover #DivIdConsoleIconOn1{
     visibility: hidden;
     height: 0px;
+    width: 0px;
 
     -webkit-animation: consoleOn 1s infinite;
     -moz-animation: consoleOn 1s infinite;
@@ -410,6 +416,7 @@ button, button:active, button:after, button:before {
 #DivIdConsoleIcon:hover #DivIdConsoleIconOn2{
     visibility: hidden;
     height: 0px;
+    width: 0px;
 
     -webkit-animation: consoleOn 1s infinite;
     -moz-animation: consoleOn 1s infinite;
@@ -434,16 +441,19 @@ button, button:active, button:after, button:before {
 #DivIdConsoleIconOff, #DivIdConsoleIcon #DivIdConsoleIconOff{
     visibility: visible;
     height: 100%;
+    width: auto;
 }
 
 #DivIdConsoleIconOn, #DivIdConsoleIconOn1, #DivIdConsoleIconOn2, #DivIdConsoleIcon:hover #DivIdConsoleIconOff{
     visibility: hidden;
     height: 0px;
+    width: 0px;
 }
 
 #DivIdWebIcon:hover #DivIdWebIconOn1{
     visibility: hidden;
     height: 0px;
+    width: 0px;
 
     -webkit-animation: webOn 2s infinite;
     -moz-animation: webOn 2s infinite;
@@ -467,6 +477,7 @@ button, button:active, button:after, button:before {
 #DivIdWebIcon:hover #DivIdWebIconOn2{
     visibility: hidden;
     height: 0px;
+    width: 0px;
 
     -webkit-animation: webOn 2s infinite;
     -moz-animation: webOn 2s infinite;
@@ -490,6 +501,7 @@ button, button:active, button:after, button:before {
 #DivIdWebIcon:hover #DivIdWebIconOn3{
     visibility: hidden;
     height: 0px;
+    width: 0px;
 
     -webkit-animation: webOn 2s infinite;
     -moz-animation: webOn 2s infinite;
@@ -514,6 +526,7 @@ button, button:active, button:after, button:before {
 #DivIdWebIcon:hover #DivIdWebIconOn4{
     visibility: hidden;
     height: 0px;
+    width: 0px;
 
     -webkit-animation: webOn 2s infinite;
     -moz-animation: webOn 2s infinite;
@@ -532,11 +545,13 @@ button, button:active, button:after, button:before {
 #DivIdWebIconOff, #DivIdWebIcon #DivIdWebIconOff{
     visibility: visible;
     height: 100%;
+    width: auto;
 }
 
 #DivIdWebIconOn1, #DivIdWebIconOn2, #DivIdWebIconOn3, #DivIdWebIconOn4, #DivIdWebIcon:hover #DivIdWebIconOff{
     visibility: hidden;
     height: 0px;
+    width: 0px;
 }
 
 
@@ -914,10 +929,12 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 
@@ -925,10 +942,12 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 
@@ -936,10 +955,12 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 
@@ -947,10 +968,12 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 
@@ -958,10 +981,12 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 
@@ -969,14 +994,17 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     75% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 
@@ -984,14 +1012,17 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     75% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 
@@ -999,14 +1030,17 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     75% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 
@@ -1014,14 +1048,17 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     75% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 
@@ -1029,14 +1066,17 @@ ul li ul li {
     0% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     75% {
         visibility: hidden;
         height: 0px;
+        width: 0px;
     }
     100% {
         visibility: visible;
         height: 100%;
+        width: auto;
     }
 }
 

@@ -8,6 +8,7 @@ mobile=\0"mobile"\0;
 landline=\0"landline"\0;
 address=\0"Address"\0;
 jobTitle=\0"Job Title"\0;
+regular=\0"Regular"\0;
 consultant=\0"Consultant"\0;
 temporary=\0"Temporary"\0;
 salary=\0"Salary"\0;

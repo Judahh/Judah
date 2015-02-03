@@ -24,8 +24,8 @@ Design de Placas de Circuito Impresso:<br>
 - Altium<br>
 <br>
 HDL:<br>
-- Verilog<br>
-- VHDL<br>
+- Verilog(Básico)<br>
+- VHDL(Básico)<br>
 <br><br>
 "\0;
 software=\0"Software"\0;
@@ -52,6 +52,9 @@ Programação para Web:<br>
 Design para Web:<br>
 - CSS3<br>
 - HTML5<br>
+<br><br>
+Script para Web:<br>
+- JavaScript<br>
 <br><br>
 "\0;
 mobile=\0"Mobile"\0;

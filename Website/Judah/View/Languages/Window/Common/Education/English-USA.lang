@@ -24,8 +24,8 @@ Circuit Board Design:<br>
 - Altium<br>
 <br><br>
 HDL:<br>
-- Verilog<br>
-- VHDL<br>
+- Verilog(Basic)<br>
+- VHDL(Basic)<br>
 <br><br>
 "\0;
 software=\0"Software"\0;
@@ -52,6 +52,9 @@ Web Programming:<br>
 Web Design:<br>
 - CSS3<br>
 - HTML5<br>
+<br><br>
+Web Script:<br>
+- JavaScript<br>
 <br><br>
 "\0;
 mobile=\0"Mobile"\0;

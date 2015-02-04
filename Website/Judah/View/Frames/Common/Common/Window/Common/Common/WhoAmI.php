@@ -19,7 +19,7 @@
                 </div>
                 <div id="DivIdProjectTitleText2">
                     <div id="DivIdTitleTextSize">
-                        <div id="DivIdTextName">
+                        <div id="DivIdTextName" itemprp="">
                             <?php
                                 echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "name");
                             ?>

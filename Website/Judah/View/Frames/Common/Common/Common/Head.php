@@ -2,6 +2,12 @@
     <title>JUDAH</title>
     <meta content="text/html" charset="UTF-8"/>
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <meta name="author" content="Judah Holanda Correia Lima">
+    <meta name="keywords" content="Judah ,Software Development, Firmware Development, Hardware Engineering, Software Engineering, Firmware Engineering, Java, UML, C, JavaScript, Linux, Programming, Operating Systems, Embedded Systems, jQuery, Scrum, PHP,JSON, C++, C#, Android, IOS, HTML5, CSS3, JavaScript">
+    <meta name="description" content="JH">
+
     <script src="http://www.google.com/jsapi" type="text/javascript"></script>
     <script type="text/javascript">google.load("jquery", "1.3.2");</script>
 

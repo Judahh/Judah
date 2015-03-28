@@ -6,17 +6,15 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
     <meta name="author" content="Judah Holanda Correia Lima">
     <meta name="keywords" content="Judah ,Software Development, Firmware Development, Hardware Engineering, Software Engineering, Firmware Engineering, Java, UML, C, JavaScript, Linux, Programming, Operating Systems, Embedded Systems, jQuery, Scrum, PHP,JSON, C++, C#, Android, IOS, HTML5, CSS3, JavaScript">
-    <meta name="description" content="JH">
-
-    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
-    <script type="text/javascript">google.load("jquery", "1.3.2");</script>
+    <meta name="description" content="Judah Holanda Correia Lima's Professional Website.">
+    <meta name="description=" content="Judah Holanda Correia Lima's Professional Website.">
 
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Body/Search/Common.css" rel="stylesheet" media="all" type="text/css">
 
     <link href="View/CascadingStyleSheets/Common/Common/Common/Window/Common/PopUp/Common.css" rel="stylesheet" media="all" type="text/css">
 
     <link href="View/CascadingStyleSheets/Common/Common/Common/Window/Common/Common/Common.css" rel="stylesheet" media="all" type="text/css">
-    <link href="View/CascadingStyleSheets/Mobile/Common/Common/Window/Common/Common/CommonSizeA.css" rel="stylesheet" media="(max-width: 500px)" type="text/css">
+    <link href="View/CascadingStyleSheets/Mobile/Common/Common/Window/Common/Common/CommonSizeA.css" rel="stylesheet" media="(max-width: 700px)" type="text/css">
     <link href="View/CascadingStyleSheets/Mobile/Common/Common/Window/Common/Common/CommonSizeB.css" rel="stylesheet" media="(max-width: 600px)" type="text/css">
     <link href="View/CascadingStyleSheets/Mobile/Common/Common/Window/Common/Common/CommonSizeC.css" rel="stylesheet" media="(max-width: 850px)" type="text/css">
 

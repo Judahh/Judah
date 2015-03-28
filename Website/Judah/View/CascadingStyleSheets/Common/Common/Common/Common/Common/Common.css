@@ -91,6 +91,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("../../../../../../Fonts/OpenSans-Light.ttf")  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;

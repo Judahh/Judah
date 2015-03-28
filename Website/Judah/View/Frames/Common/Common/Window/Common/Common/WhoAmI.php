@@ -39,6 +39,9 @@
                     <div id="DivIdTextBasic">
                         <div id="DivIdTextTalkingAboutMe">
                             <?php
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "personalStatement");
+                            ?>
+                            <?php
                                 echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "WhoAmI", "talkingAboutMe");
                             ?>
                         </div>

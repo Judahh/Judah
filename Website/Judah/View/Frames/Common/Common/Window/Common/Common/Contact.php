@@ -506,6 +506,42 @@
                     </div>
                 </button>
             </div>
+
+            <div id="DivIdDivisor">
+                <div id="DivIdDivisorA">
+                    <div id="DivIdNeon">
+                        <div id="DivIdMenuItem">
+                            <div id="DivIdIcon">
+                                <div id="DivIdFontBig">±</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="DivIdDivisorB">
+                    <div id="DivIdText">
+                        <div id="DivIdProjectTitleText3">
+                            <div id="DivIdTitleTextSize">
+                                <?php
+                                $multilingualText = MultilingualText::MultilingualText();
+                                echo $multilingualText->getMultilingualTextFromWindowFromCommon($language, "Contact", "curriculumVitae");
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="DivFullBlock">
+                <button id="ButtonIdSend" onclick="downloadCurriculumVitae()">
+                    <div id="DivIdText">
+                        <?php
+                        $multilingualText = MultilingualText::MultilingualText();
+                        echo $multilingualText->getMultilingualTextFromWindowFromCommon($language, "Contact", "download");
+                        ?>
+                    </div>
+                </button>
+            </div>
+
             <div id="DivIdDivisor">
                 <div id="DivIdDivisorA">
                     <div id="DivIdNeon">

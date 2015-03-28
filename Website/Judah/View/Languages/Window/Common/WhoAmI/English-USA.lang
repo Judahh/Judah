@@ -1,5 +1,14 @@
 whoAmI=\0"Who Am I?"\0;
 name=\0"JUDAH HOLANDA CORREIA LIMA"\0;
+personalStatementTitle=\0"PERSONAL STATEMENT"\0;
+personalStatement=\0"
+<p style=" text-indent: 2.5em;">
+I'm a 22 years old Computer Engineer from Fortaleza (Brazil). I love everything that has to do with Computers so that means, Programming, Gamming, Designing and etc.
+</p><br>
+<p style=" text-indent: 2.5em;">
+I have 1.5 years of experience working as a mobile/web developer and some more working on projects including firmware, hardware and even physics, but now I’m ready for visiting other countries and work anywhere! I love working with people, especially if they have the same passion I have for what they do.
+</p><br>
+"\0;
 talkingAboutMe=\0"
 <p style=" text-indent: 2.5em;">
 If it could be described in one word it would be: "ORIGINAL". I'm different in the way of behave and especially in thinking. I imagine that I am in this world to show a new perspective and a new way to make it happen, to see beyond the obvious and trivial, increase possibilities, maximize performance in any area.. I do not like to do anything poorly developed and if necessary I redo everything from the beginning, broadly as possible in order to address all cases and in the most efficient way.

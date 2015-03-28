@@ -42,22 +42,23 @@ function requestVariable(file,format,stringVariable) {
 
         ajaxRequest.onreadystatechange = function () {
             if (ajaxRequest.readyState == 4) {
-                requestDone=true;
+
+                //var text=getStringVariableText(ajaxRequest.responseText,stringVariable);
+                //alert("Var="+text);
+
+                sessionStorage.setItem(file, ajaxRequest.responseText);
+                domStorage[file]=ajaxRequest.responseText;
+
             }
         }
 
         ajaxRequest.open(format, file, true);
         ajaxRequest.send();
 
-        while(!requestDone){
-        }
+        return requestVariable(file,format,stringVariable);
 
-        getStringVariableText(ajaxRequest.responseText,stringVariable);
-
-        sessionStorage.setItem(file, ajaxRequest.responseText);
-        domStorage[file]=ajaxRequest.responseText;
     }else{
-        getStringVariableText(cached,stringVariable);
+        return getStringVariableText(cached,stringVariable);
     }
 }
 
@@ -100,4 +101,24 @@ function getMultilingualTextFromWindowFromCommon(stringLanguage, stringPage, str
 
 function getMultilingualTextFromWindowFromPopUp(stringLanguage, stringPage, stringVariable){
     return getMultilingualTextFromWindow(stringLanguage, "PopUp", stringPage, stringVariable);
+}
+
+function getMultilingualTextWithCurrentLanguage(format, stringPageType, stringPageSubType, stringPage, stringVariable){
+    return requestVariable("View/Languages/"+stringPageType+"/"+stringPageSubType+"/"+stringPage+"/"+getCookie("language")+".lang", format, stringVariable);
+}
+
+function getMultilingualGETTextWithCurrentLanguage(stringPageType, stringPageSubType, stringPage, stringVariable){
+    return getMultilingualTextWithCurrentLanguage("GET", stringPageType, stringPageSubType, stringPage, stringVariable);
+}
+
+function getMultilingualTextFromWindowWithCurrentLanguage(stringPageSubType, stringPage, stringVariable){
+    return getMultilingualGETTextWithCurrentLanguage("Window", stringPageSubType, stringPage, stringVariable);
+}
+
+function getMultilingualTextFromWindowFromCommonWithCurrentLanguage(stringPage, stringVariable){
+    return getMultilingualTextFromWindowWithCurrentLanguage("Common", stringPage, stringVariable);
+}
+
+function getMultilingualTextFromWindowFromPopUpWithCurrentLanguage(stringPage, stringVariable){
+    return getMultilingualTextFromWindowWithCurrentLanguage("PopUp", stringPage, stringVariable);
 }

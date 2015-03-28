@@ -110,6 +110,8 @@
 }
 
 #ImgIdPicture{
+    box-sizing: border-box;
+    border: solid black 15px;
     border-radius: 1000px;
 }
 
@@ -160,6 +162,7 @@
 }
 
 #DivMyPicture{
+    margin: 15px;
     width:25%;
     float: left;
 }

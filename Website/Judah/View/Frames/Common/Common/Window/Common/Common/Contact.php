@@ -532,7 +532,7 @@
             </div>
             <br>
             <div id="DivFullBlock">
-                <button id="ButtonIdSend" onclick="downloadCurriculumVitae()">
+                <button id="ButtonIdSend" onclick="startToMakeCurriculumVitae()">
                     <div id="DivIdText">
                         <?php
                         $multilingualText = MultilingualText::MultilingualText();

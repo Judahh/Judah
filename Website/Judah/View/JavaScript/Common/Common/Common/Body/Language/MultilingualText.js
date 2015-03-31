@@ -1,10 +1,7 @@
-var requestDone;
-
-function requestVariable(file,format,stringVariable) {
+function requestVariable(file, format, stringVariable, index, subIndex) {
     var domStorage=window.localStorage || (window.globalStorage? globalStorage[location.hostname] : null);
     var cached=domStorage[file];
     var cached2=sessionStorage.getItem(file);
-    requestDone=false;
 
     if (cached==null||cached==''||cached==undefined) {
         cached=cached2;
@@ -43,11 +40,13 @@ function requestVariable(file,format,stringVariable) {
         ajaxRequest.onreadystatechange = function () {
             if (ajaxRequest.readyState == 4) {
 
-                //var text=getStringVariableText(ajaxRequest.responseText,stringVariable);
+                var text=getStringVariableText(ajaxRequest.responseText,stringVariable);
                 //alert("Var="+text);
 
                 sessionStorage.setItem(file, ajaxRequest.responseText);
                 domStorage[file]=ajaxRequest.responseText;
+
+                callFunction(index, subIndex, text);
 
             }
         }
@@ -55,10 +54,39 @@ function requestVariable(file,format,stringVariable) {
         ajaxRequest.open(format, file, true);
         ajaxRequest.send();
 
-        return requestVariable(file,format,stringVariable);
-
     }else{
-        return getStringVariableText(cached,stringVariable);
+        callFunction(index, subIndex, getStringVariableText(cached,stringVariable));
+    }
+}
+
+function callFunction(index, subIndex, text){
+    switch (index){
+        case 0:
+            getCurriculumVitae(subIndex);
+            break;
+
+        case 1:
+            setCurriculumVitae(subIndex, text);
+            break;
+
+        case 2:
+            getLanguage();
+            break;
+
+        case 3:
+            setLanguage(text);
+            break;
+
+        case 4:
+            getLanguageToMakeCurriculumVitae();
+            break;
+
+        case 5:
+            setLanguageToMakeCurriculumVitae(text);
+            break;
+
+        default:
+            break;
     }
 }
 
@@ -83,42 +111,58 @@ function getStringVariableText(fileText, stringVariable){
     return "";
 }
 
-function getMultilingualText(format, stringLanguage, stringPageType, stringPageSubType, stringPage, stringVariable){
-    return requestVariable("View/Languages/"+stringPageType+"/"+stringPageSubType+"/"+stringPage+"/"+stringLanguage+".lang", format, stringVariable);
+function getMultilingualText(format, stringLanguage, stringPageType, stringPageSubType, stringPage, stringVariable, index, subIndex){
+    return requestVariable("View/Languages/"+stringPageType+"/"+stringPageSubType+"/"+stringPage+"/"+stringLanguage+".lang", format, stringVariable, index, subIndex);
 }
 
-function getMultilingualGETText(stringLanguage, stringPageType, stringPageSubType, stringPage, stringVariable){
+function getMultilingualGETText(stringLanguage, stringPageType, stringPageSubType, stringPage, stringVariable, index, subIndex){
     return getMultilingualText("GET",stringLanguage, stringPageType, stringPageSubType, stringPage, stringVariable);
 }
 
-function getMultilingualTextFromWindow(stringLanguage, stringPageSubType, stringPage, stringVariable){
-    return getMultilingualGETText(stringLanguage, "Window", stringPageSubType, stringPage, stringVariable);
+function getMultilingualTextFromWindow(stringLanguage, stringPageSubType, stringPage, stringVariable, index, subIndex){
+    return getMultilingualGETText(stringLanguage, "Window", stringPageSubType, stringPage, stringVariable, index, subIndex);
 }
 
-function getMultilingualTextFromWindowFromCommon(stringLanguage, stringPage, stringVariable){
-    return getMultilingualTextFromWindow(stringLanguage, "Common", stringPage, stringVariable);
+function getMultilingualTextFromWindowFromCommon(stringLanguage, stringPage, stringVariable, index, subIndex){
+    return getMultilingualTextFromWindow(stringLanguage, "Common", stringPage, stringVariable, index, subIndex);
 }
 
-function getMultilingualTextFromWindowFromPopUp(stringLanguage, stringPage, stringVariable){
-    return getMultilingualTextFromWindow(stringLanguage, "PopUp", stringPage, stringVariable);
+function getMultilingualTextFromWindowFromPopUp(stringLanguage, stringPage, stringVariable, index, subIndex){
+    return getMultilingualTextFromWindow(stringLanguage, "PopUp", stringPage, stringVariable, index, subIndex);
 }
 
-function getMultilingualTextWithCurrentLanguage(format, stringPageType, stringPageSubType, stringPage, stringVariable){
-    return requestVariable("View/Languages/"+stringPageType+"/"+stringPageSubType+"/"+stringPage+"/"+getCookie("language")+".lang", format, stringVariable);
+function getMultilingualCurrentLanguage(format, index){
+    return requestVariable("View/Languages/RetrieveLanguage.php", format, "language", index, 0);
 }
 
-function getMultilingualGETTextWithCurrentLanguage(stringPageType, stringPageSubType, stringPage, stringVariable){
-    return getMultilingualTextWithCurrentLanguage("GET", stringPageType, stringPageSubType, stringPage, stringVariable);
+function getMultilingualGETCurrentLanguage(index){
+    return getMultilingualCurrentLanguage("GET", index);
 }
 
-function getMultilingualTextFromWindowWithCurrentLanguage(stringPageSubType, stringPage, stringVariable){
-    return getMultilingualGETTextWithCurrentLanguage("Window", stringPageSubType, stringPage, stringVariable);
+function getMultilingualCurrentLanguageBasic(format){
+    return getMultilingualCurrentLanguage(format, 3);
 }
 
-function getMultilingualTextFromWindowFromCommonWithCurrentLanguage(stringPage, stringVariable){
-    return getMultilingualTextFromWindowWithCurrentLanguage("Common", stringPage, stringVariable);
+function getMultilingualGETCurrentLanguageBasic(){
+    return getMultilingualCurrentLanguageBasic("GET");
 }
 
-function getMultilingualTextFromWindowFromPopUpWithCurrentLanguage(stringPage, stringVariable){
-    return getMultilingualTextFromWindowWithCurrentLanguage("PopUp", stringPage, stringVariable);
+function getMultilingualTextWithCurrentLanguage(format, stringPageType, stringPageSubType, stringPage, stringVariable, index, subIndex){
+    return requestVariable("View/Languages/"+stringPageType+"/"+stringPageSubType+"/"+stringPage+"/"+getCookie("language")+".lang", format, stringVariable, index, subIndex);
+}
+
+function getMultilingualGETTextWithCurrentLanguage(stringPageType, stringPageSubType, stringPage, stringVariable, index, subIndex){
+    return getMultilingualTextWithCurrentLanguage("GET", stringPageType, stringPageSubType, stringPage, stringVariable, index, subIndex);
+}
+
+function getMultilingualTextFromWindowWithCurrentLanguage(stringPageSubType, stringPage, stringVariable, index, subIndex){
+    return getMultilingualGETTextWithCurrentLanguage("Window", stringPageSubType, stringPage, stringVariable, index, subIndex);
+}
+
+function getMultilingualTextFromWindowFromCommonWithCurrentLanguage(stringPage, stringVariable, index, subIndex){
+    return getMultilingualTextFromWindowWithCurrentLanguage("Common", stringPage, stringVariable, index, subIndex);
+}
+
+function getMultilingualTextFromWindowFromPopUpWithCurrentLanguage(stringPage, stringVariable, index, subIndex){
+    return getMultilingualTextFromWindowWithCurrentLanguage("PopUp", stringPage, stringVariable, index, subIndex);
 }

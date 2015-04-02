@@ -302,7 +302,15 @@ function replaceXML(text){
             location = findXML(text, variable[0], variable[1]);
         }
     }
+    //while(text.charAt(0)==' '||text.charAt(0)=='\n'||text.charAt(0)==' '){
+    //    text = text.substring(1,text.length);
+    //}
+    //alert("S"+text.charAt(0)+"E");
     return text;
+}
+
+function removeTrash(){
+
 }
 
 function findXML(fileText, type, closeType){
@@ -673,12 +681,12 @@ function downloadCurriculumVitae(){
     doc.text(15, 120, curriculumVitaePersonalStatement);
 
     doc.setTextColor(0);
-    doc.text(15, 115, curriculumVitaePersonalStatementTitle);
+    doc.text(15, 175, curriculumVitaeDiplomasCertificates);
     doc.setDrawColor(0);
-    doc.line(13, 116, 103, 116);
+    doc.line(13, 176, 103, 176);
     doc.setTextColor(150);
-    curriculumVitaePersonalStatement=doc.splitTextToSize(curriculumVitaePersonalStatement, 160);
-    doc.text(15, 120, curriculumVitaePersonalStatement);
+    curriculumVitaeDiplomasCertificates=doc.splitTextToSize(curriculumVitaeTalkingAboutDiplomasCertificates, 160);
+    doc.text(15, 180, curriculumVitaeTalkingAboutDiplomasCertificates);
 
     doc.setTextColor(0);
     doc.text(107, 115, curriculumVitaePersonalStatementTitle);

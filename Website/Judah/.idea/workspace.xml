@@ -35,31 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WhoAmI.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WhoAmI.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/View/Frames/Common/Common/Window/Common/Common/WhoAmI.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1350">
+            <state vertical-scroll-proportion="0.608931" vertical-offset="135" max-vertical-offset="1350">
               <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="English-USA.lang" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Languages/Window/Common/WhoAmI/English-USA.lang">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="465">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PDFMaker.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PDFMaker.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/JavaScript/Common/Common/Common/PDFMaker.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82306683" vertical-offset="9572" max-vertical-offset="10455">
-              <caret line="680" column="56" selection-start-line="680" selection-start-column="56" selection-end-line="680" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4532" max-vertical-offset="10575">
+              <caret line="312" column="0" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,8 +122,8 @@
         <option value="$PROJECT_DIR$/View/JavaScript/Common/Common/Common/Body/PopUp/Common.js" />
         <option value="$PROJECT_DIR$/View/JavaScript/Common/Common/Common/Body/Language/MultilingualText.js" />
         <option value="$PROJECT_DIR$/View/Frames/Common/Common/Window/Common/Common/WhoAmI.php" />
-        <option value="$PROJECT_DIR$/View/Languages/Window/Common/WhoAmI/English-USA.lang" />
         <option value="$PROJECT_DIR$/View/JavaScript/Common/Common/Common/PDFMaker.js" />
+        <option value="$PROJECT_DIR$/View/Languages/Window/Common/WhoAmI/English-USA.lang" />
       </list>
     </option>
   </component>
@@ -1074,26 +1064,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Frames/Common/Common/Window/Common/Common/WhoAmI.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1350">
-          <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/View/Languages/Window/Common/WhoAmI/English-USA.lang">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="465">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/JavaScript/Framework/jspdf-1.0.272/jspdf.debug.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="75661" max-vertical-offset="139905">
           <caret line="5040" column="4" selection-start-line="5040" selection-start-column="4" selection-end-line="5040" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/JavaScript/Common/Common/Common/PDFMaker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4532" max-vertical-offset="10575">
+          <caret line="312" column="0" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1106,10 +1088,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/JavaScript/Common/Common/Common/PDFMaker.js">
+    <entry file="file://$PROJECT_DIR$/View/Languages/Window/Common/WhoAmI/English-USA.lang">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82306683" vertical-offset="9572" max-vertical-offset="10455">
-          <caret line="680" column="56" selection-start-line="680" selection-start-column="56" selection-end-line="680" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0982962" vertical-offset="0" max-vertical-offset="763">
+          <caret line="5" column="337" selection-start-line="5" selection-start-column="337" selection-end-line="5" selection-end-column="337" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Frames/Common/Common/Window/Common/Common/WhoAmI.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.608931" vertical-offset="135" max-vertical-offset="1350">
+          <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
           <folding />
         </state>
       </provider>

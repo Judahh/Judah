@@ -273,177 +273,209 @@ function getCurriculumVitae(index){
     }
 }
 
-function removeXMLData(text){
-    curriculumVitaeMyName = text;
+function replaceString(string, subStringStartIndex, subStringEndIndex, newSubString){
+    var before = string.substring(0,subStringStartIndex);
+    var after = string.substring(subStringEndIndex+1,string.length);
+    //alert(subStringStartIndex+" e "+(subStringEndIndex+1));
+    //alert(string.substring(subStringStartIndex,subStringEndIndex+1));
+    //alert("before="+before+
+    //'\n'+"after="+after);
+    var newString = before+newSubString+after;
+    return newString;
 }
 
 function replaceXML(text){
     var paragraph = ['p', '/p', '\t', ''];
-    var lineBreaker = ['br', null, '', ''];
-    var variables = [paragraph, lineBreaker];
+    var lineBreaker = ['br', null, '\n', ''];
+    var lineBreaker2 = ['/br', null, '\n', ''];
+    var variables = [paragraph, lineBreaker, lineBreaker2];
     for(index=0; index<variables.length; index++){
         var variable= variables[index];
         var location = findXML(text, variable[0], variable[1]);
         while(location[0]>-1){
-            //achou, substituir strings
+            text = replaceString(text,location[0],location[1],variable[2]);
+
+            if(location[2]>-1){
+                text = replaceString(text,location[2],location[3],variable[3]);
+            }
+
+            location = findXML(text, variable[0], variable[1]);
         }
     }
+    return text;
 }
 
 function findXML(fileText, type, closeType){
     var location = [-1, -1, -1, -1];
     var findStart   = '<'+type;
     var findEnd   = '>';
+
     var pos1 = fileText.indexOf(findStart);
     if(pos1==-1){
         return location;
     }
-    var pos2 = fileText.indexOf(findEnd);
+
+    var subFileText=fileText.substring(pos1 + findStart.length,fileText.length);
+
+    var pos2 = subFileText.indexOf(findEnd) + pos1 + findStart.length;
+
     if(pos2==-1||pos2<=pos1){
         return location;
     }
 
-    if(fileText.charAt(pos1+pos1.length)==' '||fileText.charAt(pos1+pos1.length)==findEnd){
+    if(fileText.charAt(pos1+findStart.length)=='\t'||fileText.charAt(pos1+findStart.length)=='\n'||fileText.charAt(pos1+findStart.length)==' '||fileText.charAt(pos1+findStart.length)==findEnd){
         location[0]=pos1;
         location[1]=pos2;
+
         if(closeType!=null){
             findStart   = '<'+closeType;
+            findEnd   = '>';
+
             pos1 = fileText.indexOf(findStart);
             if(pos1==-1){
                 location = [-1, -1, -1, -1];
                 return location;
             }
-            pos2 = fileText.indexOf(findEnd);
+
+            subFileText=fileText.substring(pos1 + findStart.length,fileText.length);
+
+            pos2 = subFileText.indexOf(findEnd)+pos1+ findStart.length;
+            //alert("Achou:"+pos1+" e "+(pos2+1));
+
             if(pos2==-1||pos2<=pos1){
                 location = [-1, -1, -1, -1];
                 return location;
             }
 
-            if(fileText.charAt(pos1+pos1.length)==' '||fileText.charAt(pos1+pos1.length)==findEnd){
+            if(fileText.charAt(fileText.charAt(pos1+findStart.length)=='\t'||fileText.charAt(pos1+findStart.length)=='\n'||pos1+findStart.length)==' '||fileText.charAt(pos1+findStart.length)==findEnd){
                 location[2]=pos1;
                 location[3]=pos2;
                 return location;
             }
         }
+    }else{
+        location = [-1, -1, -1, -1];
+        return location;
     }
+
     return location;
 }
 
 function setCurriculumVitaeMyName(text){
-    curriculumVitaeMyName = text;
+    curriculumVitaeMyName = replaceXML(text);
 }
 
 function setCurriculumVitaeMyTitle(text){
-    curriculumVitaeMyTitle = text;
+    curriculumVitaeMyTitle = replaceXML(text);
 }
 
 function setCurriculumVitaeContact(text){
-    curriculumVitaeContact = text;
+    curriculumVitaeContact = replaceXML(text);
 }
 
 function setCurriculumVitaeEmail(text){
-    curriculumVitaeEmail = text;
+    curriculumVitaeEmail = replaceXML(text);
 }
 
 function setCurriculumVitaeMyEmail(text){
-    curriculumVitaeMyEmail = text;
+    curriculumVitaeMyEmail = replaceXML(text);
 }
 
 function setCurriculumVitaeWebsite(text){
-    curriculumVitaeWebsite = text;
+    curriculumVitaeWebsite = replaceXML(text);
 }
 
 function setCurriculumVitaeMyWebsite(text){
-    curriculumVitaeMyWebsite = text;
+    curriculumVitaeMyWebsite = replaceXML(text);
 }
 
 function setCurriculumVitaePersonalStatementTitle(text){
-    curriculumVitaePersonalStatementTitle = text.toUpperCase();
+    curriculumVitaePersonalStatementTitle = replaceXML(text).toUpperCase();
 }
 
 function setCurriculumVitaePersonalStatement(text){
-    curriculumVitaePersonalStatement = text;
+    curriculumVitaePersonalStatement = replaceXML(text);
 }
 
 function setCurriculumVitaeDiplomasCertificates(text){
-    curriculumVitaeDiplomasCertificates = text.toUpperCase();
+    curriculumVitaeDiplomasCertificates = replaceXML(text).toUpperCase();
 }
 
 function setCurriculumVitaeTalkingAboutDiplomasCertificates(text){
-    curriculumVitaeTalkingAboutDiplomasCertificates = text;
+    curriculumVitaeTalkingAboutDiplomasCertificates = replaceXML(text);
 }
 
 function setCurriculumVitaeHardware(text){
-    curriculumVitaeHardware = text.toUpperCase();
+    curriculumVitaeHardware = replaceXML(text).toUpperCase();
 }
 
 function setCurriculumVitaeTalkingAboutHardware(text){
-    curriculumVitaeTalkingAboutHardware = text;
+    curriculumVitaeTalkingAboutHardware = replaceXML(text);
 }
 
 function setCurriculumVitaeSoftware(text){
-    curriculumVitaeSoftware = text.toUpperCase();
+    curriculumVitaeSoftware = replaceXML(text).toUpperCase();
 }
 
 function setCurriculumVitaeTalkingAboutSoftware(text){
-    curriculumVitaeTalkingAboutSoftware = text;
+    curriculumVitaeTalkingAboutSoftware = replaceXML(text);
 }
 
 function setCurriculumVitaeWeb(text){
-    curriculumVitaeWeb = text.toUpperCase();
+    curriculumVitaeWeb = replaceXML(text).toUpperCase();
 }
 
 function setCurriculumVitaeTalkingAboutWeb(text){
-    curriculumVitaeTalkingAboutWeb = text;
+    curriculumVitaeTalkingAboutWeb = replaceXML(text);
 }
 
 function setCurriculumVitaeMobile(text){
-    curriculumVitaeMobile = text.toUpperCase();
+    curriculumVitaeMobile = replaceXML(text).toUpperCase();
 }
 
 function setCurriculumVitaeTalkingAboutMobile(text){
-    curriculumVitaeTalkingAboutMobile = text;
+    curriculumVitaeTalkingAboutMobile = replaceXML(text);
 }
 
 function setCurriculumVitaeIntelligence(text){
-    curriculumVitaeIntelligence = text.toUpperCase();
+    curriculumVitaeIntelligence = replaceXML(text).toUpperCase();
 
 }
 
 function setCurriculumVitaeTalkingAboutIntelligence(text){
-    curriculumVitaeTalkingAboutIntelligence = text;
+    curriculumVitaeTalkingAboutIntelligence = replaceXML(text);
 }
 
 function setCurriculumVitaeTeamwork(text){
-    curriculumVitaeTeamwork = text.toUpperCase();
+    curriculumVitaeTeamwork = replaceXML(text).toUpperCase();
 }
 
 function setCurriculumVitaeTalkingAboutTeamwork(text){
-    curriculumVitaeTalkingAboutTeamwork = text;
+    curriculumVitaeTalkingAboutTeamwork = replaceXML(text);
 }
 
 function setCurriculumVitaeLeadership(text){
-    curriculumVitaeLeadership = text.toUpperCase();
+    curriculumVitaeLeadership = replaceXML(text).toUpperCase();
 }
 
 function setCurriculumVitaeTalkingAboutLeadership(text){
-    curriculumVitaeTalkingAboutLeadership = text;
+    curriculumVitaeTalkingAboutLeadership = replaceXML(text);
 }
 
 function setCurriculumVitaeLanguagesCommunication(text){
-    curriculumVitaeLanguagesCommunication = text.toUpperCase();
+    curriculumVitaeLanguagesCommunication = replaceXML(text).toUpperCase();
 }
 
 function setCurriculumVitaeTalkingAboutLanguagesCommunication(text){
-    curriculumVitaeTalkingAboutLanguagesCommunication = text;
+    curriculumVitaeTalkingAboutLanguagesCommunication = replaceXML(text);
 }
 
 function setCurriculumVitaeFlexibility(text){
-    curriculumVitaeFlexibility = text;
+    curriculumVitaeFlexibility = replaceXML(text);
 }
 
 function setCurriculumVitaeTalkingAboutFlexibility(text){
-    curriculumVitaeTalkingAboutFlexibility = text;
+    curriculumVitaeTalkingAboutFlexibility = replaceXML(text);
 }
 
 function setCurriculumVitae(index, text){
@@ -637,7 +669,15 @@ function downloadCurriculumVitae(){
     doc.setDrawColor(0);
     doc.line(13, 116, 103, 116);
     doc.setTextColor(150);
-    curriculumVitaePersonalStatement=doc.splitTextToSize(curriculumVitaePersonalStatement, 210);
+    curriculumVitaePersonalStatement=doc.splitTextToSize(curriculumVitaePersonalStatement, 160);
+    doc.text(15, 120, curriculumVitaePersonalStatement);
+
+    doc.setTextColor(0);
+    doc.text(15, 115, curriculumVitaePersonalStatementTitle);
+    doc.setDrawColor(0);
+    doc.line(13, 116, 103, 116);
+    doc.setTextColor(150);
+    curriculumVitaePersonalStatement=doc.splitTextToSize(curriculumVitaePersonalStatement, 160);
     doc.text(15, 120, curriculumVitaePersonalStatement);
 
     doc.setTextColor(0);
@@ -645,7 +685,7 @@ function downloadCurriculumVitae(){
     doc.setDrawColor(0);
     doc.line(105, 116, 195, 116);
     doc.setTextColor(150);
-    curriculumVitaePersonalStatement=doc.splitTextToSize(curriculumVitaePersonalStatement, 210);
+    curriculumVitaePersonalStatement=doc.splitTextToSize(curriculumVitaePersonalStatement, 160);
     doc.text(107, 120, curriculumVitaePersonalStatement);
 
     doc.output('save');

@@ -302,15 +302,14 @@ function replaceXML(text){
             location = findXML(text, variable[0], variable[1]);
         }
     }
-    //while(text.charAt(0)==' '||text.charAt(0)=='\n'||text.charAt(0)==' '){
-    //    text = text.substring(1,text.length);
-    //}
-    //alert("S"+text.charAt(0)+"E");
+    while(text.charAt(0)==' '||text.charAt(0)=='\n'){
+        text = text.substring(1,text.length);
+    }
+
+    while(text.charAt(text.length-1)==' '||text.charAt(text.length-1)=='\n'){
+        text = text.substring(0,text.length-1);
+    }
     return text;
-}
-
-function removeTrash(){
-
 }
 
 function findXML(fileText, type, closeType){
@@ -681,20 +680,108 @@ function downloadCurriculumVitae(){
     doc.text(15, 120, curriculumVitaePersonalStatement);
 
     doc.setTextColor(0);
-    doc.text(15, 175, curriculumVitaeDiplomasCertificates);
+    doc.text(15, 170, curriculumVitaeDiplomasCertificates);
     doc.setDrawColor(0);
-    doc.line(13, 176, 103, 176);
+    doc.line(13, 171, 103, 171);
     doc.setTextColor(150);
-    curriculumVitaeDiplomasCertificates=doc.splitTextToSize(curriculumVitaeTalkingAboutDiplomasCertificates, 160);
-    doc.text(15, 180, curriculumVitaeTalkingAboutDiplomasCertificates);
+    curriculumVitaeTalkingAboutDiplomasCertificates=doc.splitTextToSize(curriculumVitaeTalkingAboutDiplomasCertificates, 160);
+    doc.text(15, 175, curriculumVitaeTalkingAboutDiplomasCertificates);
 
     doc.setTextColor(0);
-    doc.text(107, 115, curriculumVitaePersonalStatementTitle);
+    doc.text(15, 220, curriculumVitaeMobile);
     doc.setDrawColor(0);
-    doc.line(105, 116, 195, 116);
+    doc.line(13, 221, 103, 221);
     doc.setTextColor(150);
-    curriculumVitaePersonalStatement=doc.splitTextToSize(curriculumVitaePersonalStatement, 160);
-    doc.text(107, 120, curriculumVitaePersonalStatement);
+    curriculumVitaeTalkingAboutMobile=doc.splitTextToSize(curriculumVitaeTalkingAboutMobile, 160);
+    doc.text(15, 225, curriculumVitaeTalkingAboutMobile);
+
+
+    doc.setTextColor(0);
+    doc.text(107, 30, curriculumVitaeSoftware);
+    doc.setDrawColor(0);
+    doc.line(105, 31, 195, 31);
+    doc.setTextColor(150);
+    curriculumVitaeTalkingAboutSoftware=doc.splitTextToSize(curriculumVitaeTalkingAboutSoftware, 160);
+    doc.text(107, 35, curriculumVitaeTalkingAboutSoftware);
+
+    doc.setTextColor(0);
+    doc.text(107, 126, curriculumVitaeHardware);
+    doc.setDrawColor(0);
+    doc.line(105, 127, 195, 127);
+    doc.setTextColor(150);
+    curriculumVitaeTalkingAboutHardware=doc.splitTextToSize(curriculumVitaeTalkingAboutHardware, 160);
+    doc.text(107, 131, curriculumVitaeTalkingAboutHardware);
+
+
+
+
+
+    doc.addPage();
+
+    doc.setFont('Open Sans - Light');
+
+    doc.setFontSize(16);
+    doc.text(15, 20, curriculumVitaeMyName);
+    doc.setFontSize(10);
+    doc.setTextColor(150);
+    doc.text(15, 25, curriculumVitaeMyTitle);
+
+    doc.text(130, 15, curriculumVitaeContact);
+    doc.text(135, 20, curriculumVitaeEmail+": "+curriculumVitaeMyEmail);
+    doc.text(135, 25, curriculumVitaeWebsite+": "+curriculumVitaeMyWebsite);
+
+    doc.setLineWidth(0.1);
+    doc.setDrawColor(150);
+    doc.line(133, 17, 133, 26);
+
+    doc.setTextColor(0);
+    doc.text(15, 30, curriculumVitaeWeb);
+    doc.setDrawColor(0);
+    doc.line(13, 31, 103, 31);
+    doc.setTextColor(150);
+    curriculumVitaeTalkingAboutWeb=doc.splitTextToSize(curriculumVitaeTalkingAboutWeb, 160);
+    doc.text(15, 35, curriculumVitaeTalkingAboutWeb);
+
+
+    doc.setTextColor(0);
+    doc.text(107, 30, curriculumVitaeIntelligence);
+    doc.setDrawColor(0);
+    doc.line(105, 31, 195, 31);
+    doc.setTextColor(150);
+    curriculumVitaeTalkingAboutIntelligence=doc.splitTextToSize(curriculumVitaeTalkingAboutIntelligence, 160);
+    doc.text(107, 35, curriculumVitaeTalkingAboutIntelligence);
+
+    doc.setTextColor(0);
+    doc.text(107, 80, curriculumVitaeTeamwork);
+    doc.setDrawColor(0);
+    doc.line(105, 81, 195, 81);
+    doc.setTextColor(150);
+    curriculumVitaeTalkingAboutTeamwork=doc.splitTextToSize(curriculumVitaeTalkingAboutTeamwork, 160);
+    doc.text(107, 85, curriculumVitaeTalkingAboutTeamwork);
+
+    doc.setTextColor(0);
+    doc.text(107, 122, curriculumVitaeLeadership);
+    doc.setDrawColor(0);
+    doc.line(105, 123, 195, 123);
+    doc.setTextColor(150);
+    curriculumVitaeTalkingAboutLeadership=doc.splitTextToSize(curriculumVitaeTalkingAboutLeadership, 160);
+    doc.text(107, 127, curriculumVitaeTalkingAboutLeadership);
+
+    doc.setTextColor(0);
+    doc.text(107, 165, curriculumVitaeLanguagesCommunication);
+    doc.setDrawColor(0);
+    doc.line(105, 166, 195, 166);
+    doc.setTextColor(150);
+    curriculumVitaeTalkingAboutLanguagesCommunication=doc.splitTextToSize(curriculumVitaeTalkingAboutLanguagesCommunication, 160);
+    doc.text(107, 170, curriculumVitaeTalkingAboutLanguagesCommunication);
+
+    doc.setTextColor(0);
+    doc.text(107, 225, curriculumVitaeFlexibility);
+    doc.setDrawColor(0);
+    doc.line(105, 226, 195, 226);
+    doc.setTextColor(150);
+    curriculumVitaeTalkingAboutFlexibility=doc.splitTextToSize(curriculumVitaeTalkingAboutFlexibility, 160);
+    doc.text(107, 230, curriculumVitaeTalkingAboutFlexibility);
 
     doc.output('save');
 }

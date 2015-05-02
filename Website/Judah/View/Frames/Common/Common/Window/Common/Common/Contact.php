@@ -572,7 +572,7 @@
                     <div id="DivId32Height">
                         <div id="DivFloatLeft">
                             <div id="DivIdNeon">
-                                <a id="DivIdIconSocialMedia" href="http://linkedin.com/pub/judah-holanda" target="_blank">
+                                <a id="DivIdIconSocialMedia" href="https://br.linkedin.com/pub/judah-holanda/4b/692/6ab" target="_blank">
                                     i
                                 </a>
                             </div>

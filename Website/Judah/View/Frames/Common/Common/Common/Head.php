@@ -29,11 +29,11 @@
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Header/Menu/Menu.css" rel="stylesheet" media="all" type="text/css">
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Header/Menu/MenuHolder.css" rel="stylesheet" media="all" type="text/css">
 
-    <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuVideo.css" rel="stylesheet" media="all" type="text/css">
-    <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuVideoHolder.css" rel="stylesheet" media="all" type="text/css">
+    <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuLanguage.css" rel="stylesheet" media="all" type="text/css">
+    <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuLanguageHolder.css" rel="stylesheet" media="all" type="text/css">
 
-    <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuVideo/SubMenuVideo.css" rel="stylesheet" media="all" type="text/css">
-    <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuVideo/SubMenuVideoHolder.css" rel="stylesheet" media="all" type="text/css">
+    <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuLanguage/SubMenuLanguage.css" rel="stylesheet" media="all" type="text/css">
+    <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuLanguage/SubMenuLanguageHolder.css" rel="stylesheet" media="all" type="text/css">
 
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuInformation.css" rel="stylesheet" media="all" type="text/css">
     <link href="View/CascadingStyleSheets/Common/Common/Common/Common/Footer/Menu/MenuInformationHolder.css" rel="stylesheet" media="all" type="text/css">

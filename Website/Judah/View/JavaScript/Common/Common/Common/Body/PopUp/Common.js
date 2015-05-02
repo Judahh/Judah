@@ -128,7 +128,7 @@ function changeLanguageAndPopUpClose(window) {
 }
 
 function openPopUp(window) {
-    if(document.getElementById("DivIdPopUpBox").innerHTML=="") {
+    if(document.getElementById("DivIdPopUpBox").innerHTML==""||document.getElementById("DivId"+window)==null) {
         request("DivIdPopUpBox", "View/Frames/Common/Common/Window/Common/PopUp/" + window + ".php", "GET");
     }
     popUpOpen("DivIdPopUpBox");

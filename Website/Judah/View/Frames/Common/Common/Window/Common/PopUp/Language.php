@@ -2,7 +2,6 @@
     include ('../../../../../../Languages/MultilingualText.php');
     include ('../../../../../../Languages/CheckLanguage.php'); 
 ?>
-
 <div id="DivIdGlass">
     <div id="DivIdPopUp">
         <div id="DivIdPopUpHeader">
@@ -16,7 +15,7 @@
                                         <div id="DivIdTextLanguages">
                                             <?php
                                                 $multilingualText = MultilingualText::MultilingualText();
-                                                echo $multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Common", "languages");
+                                                echo $multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Language", "languages");
                                             ?>
                                         </div>
                                     </div>
@@ -55,7 +54,7 @@
                             <div id="DivIdSelectedLanguage">
                                 <div id="DivIdTextSelected"><?php
                                         $multilingualText = MultilingualText::MultilingualText();
-                                        echo "-".$multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Common", "selected").": ".$multilingualText->languageToNative($language);
+                                        echo "-".$multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Language", "selected").": ".$multilingualText->languageToNative($language);
                                 ?></div>
                             </div>
                         </div>
@@ -72,7 +71,7 @@
                             <div id="DivIdText">
                                 <?php
                                     $multilingualText = MultilingualText::MultilingualText();
-                                    echo $multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Common", "oK");
+                                    echo $multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Language", "oK");
                                 ?>
                             </div>
                         </div>
@@ -84,7 +83,7 @@
                             <div id="DivIdText">
                                 <?php
                                     $multilingualText = MultilingualText::MultilingualText();
-                                    echo $multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Common", "cancel");
+                                    echo $multilingualText->getMultilingualTextFromWindowFromPopUp($language, "Language", "cancel");
                                 ?>
                             </div>
                         </div>
@@ -94,3 +93,4 @@
         </div>
     </div>
 </div>
+<div id="DivIdLanguage"></div>

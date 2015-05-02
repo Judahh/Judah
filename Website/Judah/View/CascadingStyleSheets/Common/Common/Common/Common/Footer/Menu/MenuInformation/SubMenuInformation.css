@@ -1,11 +1,3 @@
-#DivIdSubMenuInformation{
-    
-}
-
-#DivIdSubMenuInformation ul{
-    width: 110px;
-}
-
-#DivIdSubMenuInformation ul li{
-    width: 45px;
+#RangeIdVolumeBar {
+    width: 75%;
 }

@@ -1,6 +1,5 @@
 <footer>
     <?php
-        include 'Footer/MenuInformation.php';
-//        include 'Footer/MenuVideo.php';
+        include 'Footer/MenuLanguage.php';
     ?>
 </footer>

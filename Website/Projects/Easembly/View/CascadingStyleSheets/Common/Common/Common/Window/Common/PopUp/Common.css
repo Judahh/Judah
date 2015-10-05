@@ -1,0 +1,64 @@
+#DivIdPopUpBox{
+    display: none;
+    position: fixed;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    margin: 45px;
+    width:auto;
+    height:auto;
+    z-index: 1;
+}
+
+#DivIdPopUp{
+    height: 100%;
+    width: 100%;
+}
+
+#DivIdPopUpHeader{
+    top: 0;
+    height: 45px;
+    width: 100%;
+    position: absolute;
+}
+
+#DivIdPopUpFooter{
+    position: absolute;
+    bottom: 15px;
+    right:30px;
+    height: 45px;
+    width: 100%;
+}
+
+#DivIdPopUpBody{
+    position: absolute;
+    margin: 15px;
+    bottom:45px;
+    top:45px;
+    left:45px;
+    right:45px;
+    height:auto;
+    width: auto;
+}
+
+#DivIdPopUpBodyWrap{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+#DivIdPopUpClose{
+    margin: 15px;
+    float: right;
+}
+
+#DivIdPopUpOK{
+    margin: 15px;
+    float: right;
+}
+
+#DivIdPopUpCancel{
+    margin: 15px;
+    float: right;
+}

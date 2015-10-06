@@ -1521,10 +1521,19 @@ label:before {
 }
 
 .DivClassPHPFileTree {
-    /*font-family: Georgia;*/
     font-size: 12px;
     letter-spacing: 1px;
     line-height: 1.5;
+}
+
+.DivClassPHPFileTree ul {
+    opacity: 1;
+    position: relative;
+}
+
+.DivClassPHPFileTree li:hover ul {
+    opacity: 1;
+    position: relative;
 }
 
 .DivClassPHPFileTree A {
@@ -1534,6 +1543,12 @@ label:before {
 
 .DivClassPHPFileTree A:hover {
     color: #666666;
+}
+
+.DivClassPHPFileTree LI {
+    display: list-item;
+    float: none;
+    margin-left: 23px;
 }
 
 .DivClassPHPFileTree .open {

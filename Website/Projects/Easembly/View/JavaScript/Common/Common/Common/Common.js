@@ -335,6 +335,10 @@ function stringContainsString(string,stringB) {
 function codeEditorCheck(file) {
     //alert("asfasdfasdfasdfasdfasdf");
     //alert(file);
+    if(file.includes('FileTree')) {
+        initPHPFileTree();
+    }
+
     if(file.includes('CodeEditor')) {
         saveInCache('codeEditorCount',1);
         //alert(getCodeEditorCount());

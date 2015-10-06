@@ -34,9 +34,13 @@
             </div>
         </div>
 
-        <?php
-            echo phpFileTree("../../../../../../../User/", "javascript:alert('You clicked on [link]');");
-        ?>
+        <div id="DivIdPopUpBody">
+            <div id="DivIdPopUpBodyWrap">
+                <?php
+                    echo phpFileTree("../../../../../../../User/", "javascript:alert('You clicked on [link]');");
+                ?>
+            </div>
+        </div>
 
         <div id="DivIdPopUpFooter">
             <div id="DivIdHalf">

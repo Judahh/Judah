@@ -52,6 +52,7 @@ function initDoc(file, path, doc) {
         session.setUseWrapMode(true);
         session.setWrapLimitRange(80, 80);
     }
+    //alert("Path:"+path+"\n");
     var mode = modelist.getModeForPath(path);
     session.modeName = mode.name;
     session.setMode(mode.mode);
@@ -65,7 +66,12 @@ function makeHuge(txt) {
     return txt;
 }
 
+ var files = {
+     "User/assembly_8051.asm": {name: "Assembly 8051"}
+ };
+
 var docs = {
+    "User/favicon.ico": {name: "FAV"}
     //"docs/assembly_8051.asm": {order: 1, name: "Assembly 8051"},
     //
     //"docs/latex.tex": {name: "LaTeX", wrapped: true},
@@ -101,7 +107,8 @@ modelist.modes.forEach(function(m) {
     } else {
         var path = m.name + "." + ext;
     }
-    path = "docs/" + path;
+    //path = "docs/" + path;
+    path = "User/" + path;
     if (!docs[path]) {
         docs[path] = {name: m.caption};
     } else if (typeof docs[path] == "object" && !docs[path].name) {
@@ -135,6 +142,9 @@ function prepareDocList(docs) {
         if (typeof doc != "object")
             doc = {name: doc || path};
 
+        //alert("Name:"+doc.name+"\n"
+        //    +"Doc:"+doc+"\n"
+        //    +"Path:"+path+"\n");
         doc.path = path;
         doc.desc = doc.name.replace(/^(ace|docs|demo|build)\//, "");
         if (doc.desc.length > 18)
@@ -156,13 +166,19 @@ function loadDoc(name, callback) {
         return callback(doc.session);
 
     // TODO: show load screen while waiting
+
     var path = doc.path;
+    //alert("Name:"+name+"\n"
+    //    +"Doc:"+doc+"\n"
+    //    +"Path:"+path+"\n");
     var parts = path.split("/");
     if (parts[0] == "docs")
         path = "View/JavaScript/Common/Common/Common/Editor/ace-1.1.9/demo/kitchen-sink/" + path;
     else if (parts[0] == "ace")
         //path = "View/JavaScript/Common/Common/Common/Editor/ace-1.1.9/lib/" + path;
         path = "lib/" + path;
+    else if (parts[0] == "User")
+        path = path;
 
     net.get(path, function(x) {
         initDoc(x, path, doc);
@@ -176,11 +192,16 @@ function saveDoc(name, callback) {
         return callback("Unknown document: " + name);
 
     var path = doc.path;
+    //alert("Name:"+name+"\n"
+    //    +"Doc:"+doc+"\n"
+    //    +"Path:"+path+"\n");
     var parts = path.split("/");
     if (parts[0] == "docs")
         path = "demo/kitchen-sink/" + path;
     else if (parts[0] == "ace")
         path = "lib/" + path;
+    else if (parts[0] == "User")
+        path = path;
 
     upload(path, doc.session.getValue(), callback);
 }
@@ -202,17 +223,19 @@ function upload(url, data, callback) {
 
 module.exports = {
     fileCache: fileCache,
+    files: sort(prepareDocList(files)),
     docs: sort(prepareDocList(docs)),
-    ownSource: prepareDocList(ownSource),
-    hugeDocs: prepareDocList(hugeDocs),
+    //ownSource: prepareDocList(ownSource),
+    //hugeDocs: prepareDocList(hugeDocs),
     initDoc: initDoc,
     loadDoc: loadDoc,
     saveDoc: saveDoc,
 };
 module.exports.all = {
-    "Mode Examples": module.exports.docs,
-    "Huge documents": module.exports.hugeDocs,
-    "own source": module.exports.ownSource
+    "Files": module.exports.files,
+    "Mode Examples": module.exports.docs//,
+    //"Huge documents": module.exports.hugeDocs,
+    //"own source": module.exports.ownSource
 };
 
 });

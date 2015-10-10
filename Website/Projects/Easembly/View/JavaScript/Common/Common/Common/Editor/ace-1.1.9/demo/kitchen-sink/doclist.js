@@ -66,9 +66,9 @@ function makeHuge(txt) {
     return txt;
 }
 
- var files = {
-     "User/assembly_8051.asm": {name: "Assembly 8051"}
- };
+var files = {
+    //"User/assembly_8051.asm": {name: "Assembly 8051"}
+};
 
 var docs = {
     "User/favicon.ico": {name: "FAV"}
@@ -102,17 +102,26 @@ var hugeDocs = require.toUrl ? {
 
 modelist.modes.forEach(function(m) {
     var ext = m.extensions.split("|")[0];
+
     if (ext[0] === "^") {
         path = ext.substr(1);
+        alert("Bef PATH@:"+path);
     } else {
         var path = m.name + "." + ext;
+        alert("Bef PATH:"+path);
     }
     //path = "docs/" + path;
     path = "User/" + path;
-    if (!docs[path]) {
-        docs[path] = {name: m.caption};
-    } else if (typeof docs[path] == "object" && !docs[path].name) {
-        docs[path].name = m.caption;
+    //if (!docs[path]) {
+    //    docs[path] = {name: m.caption};
+    //} else if (typeof docs[path] == "object" && !docs[path].name) {
+    //    docs[path].name = m.caption;
+    //}
+    alert("PATH:"+path);
+    if (!files[path]) {
+        files[path] = {name: m.caption};
+    } else if (typeof files[path] == "object" && !files[path].name) {
+        files[path].name = m.caption;
     }
 });
 
@@ -120,10 +129,16 @@ modelist.modes.forEach(function(m) {
 
 if (window.require && window.require.s) try {
     for (var path in window.require.s.contexts._.defined) {
-        if (path.indexOf("!") != -1)
+
+        if (path.indexOf("!") != -1) {
+            //alert("indexOf!:" + path);
             path = path.split("!").pop();
-        else
+            //alert("newPath:" + path);
+        }else {
+            //alert("Else!:" + path);
             path = path + ".js";
+            //alert("newPath:" + path);
+        }
         ownSource[path] = "";
     }
 } catch(e) {}
@@ -224,18 +239,18 @@ function upload(url, data, callback) {
 module.exports = {
     fileCache: fileCache,
     files: sort(prepareDocList(files)),
-    docs: sort(prepareDocList(docs)),
-    //ownSource: prepareDocList(ownSource),
+    //docs: sort(prepareDocList(docs)),
+    //ownSource: sort(prepareDocList(ownSource)),
     //hugeDocs: prepareDocList(hugeDocs),
     initDoc: initDoc,
     loadDoc: loadDoc,
     saveDoc: saveDoc,
 };
 module.exports.all = {
-    "Files": module.exports.files,
-    "Mode Examples": module.exports.docs//,
+    "Files": module.exports.files//,
+    //"Mode Examples": module.exports.docs,
     //"Huge documents": module.exports.hugeDocs,
-    //"own source": module.exports.ownSource
+    //"Own Source": module.exports.ownSource
 };
 
 });

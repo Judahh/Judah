@@ -20,12 +20,15 @@
 
 #php_value register_globals 0
 
-#Options All -Indexes
+Options All -Indexes
+Options All -FollowSymLinks
+Options -Indexes
+Options -FollowSymLinks
 
-#<files wp-config.php>
-#	order allow,deny
-#	deny from all
-#</files>
+<files wp-config.php>
+	order allow,deny
+	deny from all
+</files>
 
 #RewriteEngine On
 #RewriteCond %{HTTP_REFERER} !^$
@@ -36,15 +39,15 @@
 #allow from 192.168.5.1
 #deny from all
 
-#<Files .htaccess>
-#	order allow,deny
-#	deny from all
-#</Files>
+<Files .htaccess>
+	order allow,deny
+	deny from all
+</Files>
 
-#<Files robots.txt>
-#	order allow,deny
-#	deny from all
-#</Files>
+<Files robots.txt>
+	order allow,deny
+	deny from all
+</Files>
 
 # Block IPs from accessing all but robots.txt and custom 403 page
 #SetEnvIf Request_URI "(index.html¦403\.html¦robots\.txt)$" alw

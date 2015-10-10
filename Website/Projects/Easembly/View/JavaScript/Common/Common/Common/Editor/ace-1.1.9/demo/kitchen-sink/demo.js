@@ -325,16 +325,16 @@ define(function(require, exports, module) {
     });
 
     doclist.history = doclist.files.map(function(doc) {
-        alert(doc.name);
-        alert(doc);
+        //alert(doc.name);
+        //alert(doc);
         return doc.name;
     });
 
-    doclist.history = doclist.docs.map(function(doc) {
-        alert(doc.name);
-        alert(doc);
-        return doc.name;
-    });
+    //doclist.history = doclist.docs.map(function(doc) {
+    //    alert(doc.name);
+    //    alert(doc);
+    //    return doc.name;
+    //});
 
     doclist.history.index = 0;
     doclist.cycleOpen = function(editor, dir) {

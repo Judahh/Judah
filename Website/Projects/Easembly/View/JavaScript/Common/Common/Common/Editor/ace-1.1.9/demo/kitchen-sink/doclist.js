@@ -103,12 +103,14 @@ var hugeDocs = require.toUrl ? {
 modelist.modes.forEach(function(m) {
     var ext = m.extensions.split("|")[0];
 
+    //alert("EXT:"+m.extensions);
+
     if (ext[0] === "^") {
         path = ext.substr(1);
-        alert("Bef PATH@:"+path);
+        //alert("Bef PATH@:"+path);
     } else {
         var path = m.name + "." + ext;
-        alert("Bef PATH:"+path);
+        //alert("Bef PATH:"+path);
     }
     //path = "docs/" + path;
     path = "User/" + path;
@@ -117,7 +119,7 @@ modelist.modes.forEach(function(m) {
     //} else if (typeof docs[path] == "object" && !docs[path].name) {
     //    docs[path].name = m.caption;
     //}
-    alert("PATH:"+path);
+    //alert("PATH:"+path);
     if (!files[path]) {
         files[path] = {name: m.caption};
     } else if (typeof files[path] == "object" && !files[path].name) {

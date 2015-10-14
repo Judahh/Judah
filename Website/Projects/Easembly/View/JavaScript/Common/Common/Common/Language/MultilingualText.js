@@ -93,6 +93,10 @@ function callFunction(index, subIndex, text){
             setLanguageToFacebook(text);
             break;
 
+        case 8:
+            newCodeTitleReceived(text);
+            break;
+
         default:
             break;
     }

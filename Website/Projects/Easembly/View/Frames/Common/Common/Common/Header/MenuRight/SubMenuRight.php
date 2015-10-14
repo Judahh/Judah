@@ -14,10 +14,7 @@
 <!---->
 <!--        <div id="DivIdSubMenuNotifications">-->
 <!--            <ul>-->
-<!--                <div id="DivIdSubMenuNotificationsHolder">-->
-<!--                    <div id="DivIdGlass"></div>-->
-<!--                </div>-->
-<!--                <div id="DivIdSubMenuNotificationsHolder2">-->
+<!--                <div id="DivIdSubMenuNotificationsHolderWithGlass">-->
 <!--                    <li>-->
 <!--                        <div id="DivIdDefaultCursor">-->
 <!--                            <div id="DivIdNeon">-->
@@ -46,10 +43,7 @@
 
 <!--        <div id="DivIdSubMenuSettings">-->
 <!--            <ul>-->
-<!--                <div id="DivIdSubMenuSettingsHolder" style="display: none">-->
-<!--                    <div id="DivIdGlass"></div>-->
-<!--                </div>-->
-<!--                <div id="DivIdSubMenuSettingsHolder2" style="display: none">-->
+<!--                <div id="DivIdSubMenuSettingsHolderWithGlass" style="display: none">-->
 <!--                    <li>-->
 <!--                        <div id="DivIdPointerCursor" onclick="openPopUp('EditorSettings')">-->
 <!--                            <div id="DivIdNeon">-->
@@ -77,10 +71,7 @@
         </div>
         <div id="DivIdSubMenuApplications">
             <ul>
-                <div id="DivIdSubMenuApplicationsHolder">
-                    <div id="DivIdGlass"></div>
-                </div>
-                <div id="DivIdSubMenuApplicationsHolder2">
+                <div id="DivIdSubMenuApplicationsHolderWithGlass">
                     <li>
                         <div id="DivIdPointerCursor" onclick="goToPage('Home')">
                             <div id="DivIdNeon">
@@ -142,10 +133,7 @@
         </div>
         <div id="DivIdSubMenuUser">
             <ul>
-                <div id="DivIdSubMenuUserHolder">
-                    <div id="DivIdGlass"></div>
-                </div>
-                <div id="DivIdSubMenuUserHolder2">
+                <div id="DivIdSubMenuUserHolderWithGlass">
 <!--                    <li>-->
 <!--                        <div id="DivIdPointerCursor" onclick="homeSmoothScroll('DivIdMyOrders')">-->
 <!--                            <div id="DivIdNeon">-->

@@ -25,3 +25,14 @@
     -o-transition: all 1s;
     transition: all 1s;
 }
+
+#DivIdSubMenuSearchHolderWithGlass{
+    position: absolute;
+    float: left;
+    width: 100%;
+    border: 1px solid;
+    /* opacity: 0.5; */
+    border-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 5px rgba(0, 0, 0, 1);
+}

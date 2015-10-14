@@ -37,7 +37,7 @@
         <div id="DivIdPopUpBody">
             <div id="DivIdPopUpBodyWrap">
                 <?php
-                    echo phpFileTree("../../../../../../../User/", "javascript:env.editor.getSession().setValue('[link]');");
+                    echo phpFileTree("../../../../../../../User/", "javascript:env.editor.getSession().setValue('[link]'); refreshCodeTitleText('[fileName]')");
                 ?>
             </div>
         </div>

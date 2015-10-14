@@ -28,21 +28,23 @@
             </div>
         </div>
 
-        <div id="DivIdHalf">
+        <div id="DivIdBasicControls">
             <table id="controls">
                 <tr>
                     <td>
-                        <label>
-                            <select id="mode" size="1">
-                            </select>
-                        </label>
+                        <div id="DivIdHalf">
+                            <label>
+                                <select id="mode" size="1">
+                                </select>
+                            </label>
+                        </div>
                     </td>
-                    <td>
-                        <label>
-                            <select id="doc" size="1">
-                            </select>
-                        </label>
-                    </td>
+<!--                    <td>-->
+<!--                        <label>-->
+<!--                            <select id="doc" size="1">-->
+<!--                            </select>-->
+<!--                        </label>-->
+<!--                    </td>-->
                     <td>
                         <div id="DivIdBasicButtonHolder">
                             <button id="ButtonIdBasic"  onclick="openPopUp('FileTree')">
@@ -50,6 +52,32 @@
                                     <?php
                                         $multilingualText = MultilingualText::MultilingualText();
                                         echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "CodeEditor", "openFile");
+                                    ?>
+                                </div>
+                            </button>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div id="DivIdBasicButtonHolder">
+                            <button id="ButtonIdBasic"  onclick="saveCode()">
+                                <div id="DivIdText" style="color: #ffffff">
+                                    <?php
+                                    $multilingualText = MultilingualText::MultilingualText();
+                                    echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "CodeEditor", "saveFile");
+                                    ?>
+                                </div>
+                            </button>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div id="DivIdBasicButtonHolder">
+                            <button id="ButtonIdBasic"  onclick="newCode()">
+                                <div id="DivIdText" style="color: #ffffff">
+                                    <?php
+                                    $multilingualText = MultilingualText::MultilingualText();
+                                    echo $multilingualText->getMultilingualTextFromWindowFromCommon($language , "CodeEditor", "newFile");
                                     ?>
                                 </div>
                             </button>

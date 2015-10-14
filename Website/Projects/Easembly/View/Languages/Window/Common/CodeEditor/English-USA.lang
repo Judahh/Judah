@@ -2,3 +2,5 @@ projectTitle=\0"Project Title"\0;
 codeTitle=\0"Code Title"\0;
 run=\0"Run"\0;
 openFile=\0"Open File"\0;
+saveFile=\0"Save File"\0;
+newFile=\0"New File"\0;

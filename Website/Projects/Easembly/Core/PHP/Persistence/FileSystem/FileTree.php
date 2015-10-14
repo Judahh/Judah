@@ -57,7 +57,10 @@ function phpFileTreeDirectory($directory, $return_link, $extensions = array(), $
                     $myFile = fopen("$directory/" . urlencode($this_file), "r") or die("Unable to open file!");
                     $myFileText =  fread($myFile,filesize("$directory/" . urlencode($this_file)));
                     fclose($myFile);
+                    $myFileText = str_replace("'", "\\'", $myFileText);
+                    $myFileText = str_replace("\n", "\\n", $myFileText);
                     $link = str_replace("[link]", $myFileText, $return_link);
+                    $link = str_replace("[fileName]", $this_file, $link);
                     $php_file_tree .= "<li class=\"LiClassPHPFileTreeFile " . strtolower($ext) . "\"><a href=\"$link\">" . htmlspecialchars($this_file) . "</a></li>";
                 }
             }

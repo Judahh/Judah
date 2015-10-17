@@ -384,4 +384,4 @@
         </div>
     </div>
 </div>
-<div id="DivIdLanguage"></div>
+<div id="DivIdEditorSettings"></div>

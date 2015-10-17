@@ -100,8 +100,9 @@ function request(element,file,format) {
     //cached=null;
     //alert("Cached of "+file+"=("+cached+")");
 
-    if (cached==null||cached==''||cached==undefined||((file.includes('EditorSettings')||file.includes('CodeEditor')||file.includes('FileTree')) && editorLoaded==false)) {
+    if (cached==null||cached==''||cached==undefined||((file.includes('EditorSettings')||file.includes('CodeEditor')) && editorLoaded==false)) {
         var ajaxRequest;
+
         try {
             // Opera 8.0+, Firefox, Safari
             ajaxRequest = new XMLHttpRequest();
@@ -258,38 +259,4 @@ function saveCode() {
     var file = env.editor.getSession().getValue();
     var path;
     //TODO:  terminar
-    var progressBarHolder = document.getElementById("DivIdProgressBarHolder");
-    progressBarHolder.style.height = "10px";
-    var percentComplete = event.loaded / event.total;
-    var progressBar = document.getElementById("DivIdProgressBar");
-    progressBar.style.width=percentComplete+"%";
-
-    var data = [filename, file];
-
-    var newData=JSON.stringify(data);//data.serializeArray();
-
-    //alert(newData);
-
-    $.ajax({
-        url: 'Core/PHP/Persistence/FileSystem/FileUpload.php',
-        type: 'POST',
-        data: {data : newData},
-        dataType: 'json',
-        success: function(data) {
-            if(typeof data.error === 'undefined') {
-                var progressBarHolder = document.getElementById("DivIdProgressBarHolder");
-                progressBarHolder.style.height="0px";
-                console.log('HA!!!: ' + data.success);
-            } else {
-                // Handle errors here
-
-                console.log('ERRORS: ' + data.error);
-            }
-        },
-        error: function(jqXHR, textStatus) {
-            // Handle errors here
-            console.log('ERRORS: ' + textStatus);
-            // STOP LOADING SPINNER
-        }
-    });
 }

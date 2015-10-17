@@ -13,9 +13,20 @@
     <script src="View/JavaScript/Framework/jspdf-1.0.272/jspdf.debug.js" type="text/javascript"></script>
 
     <script src="View/JavaScript/Common/Common/Common/Common.js"></script>
-    <script src="View/JavaScript/Common/Common/Common/PDFMaker.js"></script>
-    <script src="View/JavaScript/Common/Common/Common/OnWindowLoad.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Language/Common.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Body/JavaScript/Loader.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/CookieManagement/Common.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/CookieManagement/Language.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/ServerCommunication/Facebook.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/ServerCommunication/Common.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Body/Window/Home.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Body/Window/Contact.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Body/Window/Contact/PDFMaker.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Body/Common.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Body/Window/Contact/PDFMaker.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Body/OnWindowLoad.js"></script>
     <script src="View/JavaScript/Common/Common/Common/Body/Video/Common.js"></script>
     <script src="View/JavaScript/Common/Common/Common/Body/PopUp/Common.js"></script>
-    <script src="View/JavaScript/Common/Common/Common/Body/Language/MultilingualText.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Body/PopUp/Language.js"></script>
+    <script src="View/JavaScript/Common/Common/Common/Language/MultilingualText.js"></script>
 </html>

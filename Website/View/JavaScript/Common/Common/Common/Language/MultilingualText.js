@@ -85,6 +85,18 @@ function callFunction(index, subIndex, text){
             setLanguageToMakeCurriculumVitae(text);
             break;
 
+        case 6:
+            getLanguageToFacebook();
+            break;
+
+        case 7:
+            setLanguageToFacebook(text);
+            break;
+
+        case 8:
+            newCodeTitleReceived(text);
+            break;
+
         default:
             break;
     }
@@ -133,6 +145,14 @@ function getMultilingualTextFromWindowFromPopUp(stringLanguage, stringPage, stri
 
 function getMultilingualCurrentLanguage(format, index){
     return requestVariable("View/Languages/RetrieveLanguage.php", format, "language", index, 0);
+}
+
+function getMultilingualCurrentReducedFacebookLanguage(format, index){
+    return requestVariable("View/Languages/RetrieveReducedFacebookLanguage.php", format, "reducedFacebookLanguage", index, 0);
+}
+
+function getMultilingualGETCurrentReducedFacebookLanguage(index){
+    return getMultilingualCurrentReducedFacebookLanguage("GET", index);
 }
 
 function getMultilingualGETCurrentLanguage(index){

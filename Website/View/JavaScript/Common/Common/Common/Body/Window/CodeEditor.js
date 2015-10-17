@@ -1,8 +1,12 @@
 function newCode() {
-    getMultilingualTextFromWindowFromCommonWithCurrentLanguage("CodeEditor", "codeTitle", 8, 0);
+    getMultilingualTextFromWindowFromCommonWithCurrentLanguage("CodeEditor", "projectTitle", 8, 0);
 }
 
 function newCodeTitleReceived(newTitle) {
+    document.getElementById("DivIdCodeTitleText").innerHTML = newTitle;
+}
+
+function refreshCodeTitleText(newTitle){
     document.getElementById("DivIdCodeTitleText").innerHTML = newTitle;
 }
 

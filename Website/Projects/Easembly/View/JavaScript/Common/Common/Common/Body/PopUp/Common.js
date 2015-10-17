@@ -5,6 +5,12 @@ function openPopUp(window) {
     popUpOpen("DivIdPopUpBox");
 }
 
+function cleanOpenPopUp(window) {
+    var file="View/Frames/Common/Common/Window/Common/PopUp/" + window + ".php";
+    request("DivIdPopUpBox", file, "GET");
+    popUpOpen("DivIdPopUpBox");
+}
+
 function popUpClose(window) {
     fadeOutDivId(window,0.5);
 }

@@ -60,4 +60,4 @@
         </div>
     </div>
 </div>
-<div id="DivIdInformation"></div>
+<div id="DivIdFileTree"></div>

@@ -1,25 +1,23 @@
 <?php
 $data = array();
+$file = $_POST['data'];
+$files = array();
 
-if(isset($_GET['file'])) {
-    $error = false;
-    $file = $_GET['file'];
-    $files = array();
+$files = json_decode($file);
 
-    $uploaddir = '../../../../User';
-
-    if(move_uploaded_file($file[0], $uploaddir .basename($file[0])))
-    {
-        $files[] = $uploaddir .$file[0];
-    }
-    else
-    {
-        $error = true;
-    }
-
-    $data = ($error) ? array('error' => 'There was an error uploading your files') : array('files' => $files);
-} else {
-    $data = array('success' => 'Form was submitted', 'formData' => $_POST);
+$name=$files[0];
+$name = preg_replace('/\s+/', '', $name);
+$name = preg_replace("/[^A-Za-z0-9]/", "", $name);
+if (strpos($name,'.asm') == false) {
+    $name = $name.'.asm';
 }
+////$name="test.asm";
+$fileText=$files[1];
 
+$uploadFolder = '../../../../User/';
+
+$newFile = fopen($uploadFolder.$name, "w");// or die("Unable to open file!");
+fwrite($newFile, $fileText);
+fclose($newFile);
+$data = array('success' => 'name:'.$name.' file:'.$fileText.' !');
 echo json_encode($data);

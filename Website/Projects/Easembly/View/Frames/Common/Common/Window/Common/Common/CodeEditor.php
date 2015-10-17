@@ -47,7 +47,7 @@
 <!--                    </td>-->
                     <td>
                         <div id="DivIdBasicButtonHolder">
-                            <button id="ButtonIdBasic"  onclick="openPopUp('FileTree')">
+                            <button id="ButtonIdBasic"  onclick="cleanOpenPopUp('FileTree')">
                                 <div id="DivIdText" style="color: #ffffff">
                                     <?php
                                         $multilingualText = MultilingualText::MultilingualText();
